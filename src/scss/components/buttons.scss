@@ -1,0 +1,22 @@
+.btn {
+    min-width: 210px;
+    &.btn-secondary {
+        color: #fff;
+    
+        &:hover,
+        &:active,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    &.btn-arrow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        svg {
+            color: #fff;
+        }
+    }
+}

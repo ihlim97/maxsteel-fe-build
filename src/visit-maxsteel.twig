@@ -1,0 +1,122 @@
+{% extends "templates/partials/base.twig" %}
+
+{% block main %}
+    <div class="container-fluid px-3 px-md-5 py-5">
+        <h1 class="p1 h2">VISIT MAXSTEEL</h1>
+    </div>
+
+    <div class="banner">
+        <img src="assets/img/warehouse.png" alt="">
+    </div>
+
+    <div class="container-fluid px-3 px-md-5 py-5">
+        <div class="row mb-5">
+            <div class="col-12 col-md-6">
+                {% embed "templates/components/title.twig" with {
+                    colourVariant: 'p1'
+                } %}
+                    {% block text %}
+                        <h2 class="h3 mb-4">MAXSTEEL SINGAPORE</h2>
+                    {% endblock %}
+                {% endembed %}
+
+                <p>MaxSteel Enterprise Private Limited is a Singapore based steel processing center incorporated on 29th May 1995. Since inception in 1995, MaxSteel has been providing quality steel products and excellent services to various established companies in the electrical, electronic, automotive and fabrication industries. To better facilitate customers with China operations, a fully owned subsidiary, MaxSteel Corporation (Suzhou), was inaugurated on 17th February 2004 in the People’s Republic of China.</p>
+                <p>The main business activities of the company are supplying and distributing of ferrous and non-ferrous products in slitted or sheared form, providing steel processing services and as general importer, exporter and indenter of materials.</p>
+                <p>MaxSteel is well known for capable productivity and flexibility to meet the requirements of customers with Just-In-Time (JIT) inventory business strategies. The company established a reputation over the past years as a reliable and trustworthy material supplier, supported with numerous accolades and testimonials.</p>
+                <p>The company is ISO 9001 certified since 2002, indicating an accepted quality management system being applied. The expansion and development of facilities has led the Singapore factory size to stand more than 10,000 m2 in land area.</p>
+                <p>Today, MaxSteel Enterprise continues to provide the highest level of services and strives to make MaxSteel a quality name in the metal supply industry.</p>
+            </div>
+            <div class="col-12 col-md-6 pt-5">
+                <div class="img-aspect-ratio variant-4:5">
+                    <img src="assets/img/steel-rolls-2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="section variant-4 mb-5">
+            <div class="line"></div>
+            <div class="row mb-5">
+                <div class="col-12 col-md-8 offset-md-2">
+                    {% embed "templates/components/title.twig" with {
+                        colourVariant: 'p1'
+                    } %}
+                        {% block text %}
+                            <h3 class="mb-4">MESSAGE FROM THE MANAGING DIRECTOR</h3>
+                        {% endblock %}
+                    {% endembed %}
+
+                    <p>Welcome to the MaxSteel Group of Companies.</p>
+                    <p>We are a dynamic and growing organization in the ferrous and non-ferrous processing industry offering a one-stop-supply solution to the electro-mechanical and hard disk drive industries.</p>
+                    <p>Our devotion and unyielding spirit throughout our course of business has earned us great reputation as the most resourceful, quick response and action supplier among our competitors.</p>
+                    <p>However, we always remember what Warren Buffet had also said about reputation. He said “It takes 20 years to build a reputation, whereas only 5 minutes to lose it.”</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-9">
+                    <div class="img-aspect-ratio variant-16:6">
+                        <img src="assets/img/businessman.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="floating-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-6 offset-md-6">
+                            {% include "templates/components/blockquote-variant-hero.twig" %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% embed "templates/components/title.twig" with {
+            colourVariant: 'p1'
+        } %}
+            {% block text %}
+                <h2 class="h3">MILESTONE</h2>
+            {% endblock %}
+        {% endembed %}
+    </div>
+
+    <div class="container-fluid bg-gray-200 px-3 px-md-5 py-5">
+        <div class="carousel variant-timeline swiper-container">
+            <div class="swiper-wrapper">
+                {% for item in 1995..2020 %}
+                    <div class="swiper-slide">
+                        <h5>{{ item }}</h5>
+                        {% include "templates/components/blockquote-variant-milestone.twig" %}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-scrollbar mt-5"></div>
+            <h6 class="gray-900 text-center mt-3">DRAG TO EXPLORE</h6>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 section variant-5">
+        <div class="row align-items-center py-5">
+            <div class="col-12 col-md-5 text-right px-5">
+                <h2 class="display-2 p1 offset-title-right">VISION</h2>
+                <p class="h5 p2">To be the top preferred metal processing and trading center that supports metal product engineering solution providers in the world.</p>
+            </div>
+            <div class="col-12 col-md-7 px-0">
+                <div class="img-aspect-ratio variant-16:9">
+                    <img src="assets/img/factory-floor.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="row align-items-center py-5">
+            <div class="col-12 col-md-7 px-0">
+                <div class="img-aspect-ratio variant-16:9">
+                    <img src="assets/img/technology-discussion-1.png" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-5 px-5">
+                <p class="h5 p2">To continually challenge ourselves in sourcing and supplying unique products and services with excellent quality and competitive pricing for the mutual benefit of our customers.</p>
+                <h2 class="display-2 p1 offset-title-left">MISSION</h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}

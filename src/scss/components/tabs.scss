@@ -1,0 +1,32 @@
+.nav.nav-pills {
+    a.nav-link {
+        color: #000;
+        font-weight: 600;
+        position: relative;
+        margin: 0 1rem;
+
+        &.active {
+            background-color: $p1;
+            color: #fff;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: -1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 1rem;
+            border-right: 1px solid #BBBBBB;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child::before {
+            display: none;
+        }
+    }
+}

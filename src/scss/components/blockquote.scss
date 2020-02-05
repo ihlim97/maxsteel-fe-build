@@ -1,0 +1,17 @@
+.blockquote {
+    &.variant-milestone {
+        border-left: 1px solid $p2;
+        padding: 0 1rem;
+    
+        p {
+            font-size: 0.875rem;
+        }
+    }
+
+    &.variant-hero {
+        footer {
+            font-weight: 800;
+            padding-left: 0;
+        }
+    }
+}

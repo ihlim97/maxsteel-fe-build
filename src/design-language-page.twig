@@ -1,0 +1,137 @@
+{% extends "templates/partials/base.twig" %}
+
+{% block main %}
+
+
+<div class="container-fluid p-5">
+    <div class="my-5">
+        <p class="badge badge-primary">Headline styles</p>
+        <div class="row">
+            <div class="col-12 mb-4">
+                <h1 class="display-1">Display</h1>
+                <h1 class="display-2">Display</h1>
+                <h1 class="display-3">Display</h1>
+                <h1 class="display-4">Display</h1>
+            </div>
+            <div class="col-12">
+                <h1>Heading</h1>
+                <h2>Heading</h2>
+                <h3>Heading</h3>
+                <h4>Heading</h4>
+                <h5>Heading</h5>
+                <h6>Heading</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5">
+        <p class="badge badge-primary">Text styles</p>
+        <p class="lead">Trust, as strong as steel</p>
+        <p>Precisely the way you want it.</p>
+        <p class="small">Materials for a better world.</p>
+    </div>
+
+    <div class="my-5">
+        <p class="badge badge-primary">Colour System</p>
+        <div class="row">
+            <div class="col-6">
+                <div class="bg-p1 px-3 pt-5 py-3">
+                    <p class="lead w mb-0">Strong Blue</p>
+                    <p class="light w mb-0">#0070C0</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="bg-p2 px-3 pt-5 py-3">
+                    <p class="lead w mb-0">Soft Orange</p>
+                    <p class="light w mb-0">#E7C27B</p>
+                </div>
+            </div>
+            <div class="col-12 mt-4">
+                <div class="bg-s1 px-3 pt-5 py-3">
+                    <p class="lead w mb-0">Dark Blue</p>
+                    <p class="light w mb-0">#175079</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5">
+        <p class="badge badge-primary">Paragraphs</p>
+        <div class="row pt-5">
+            <div class="col-6">
+                <div class="title variant-p1">
+                    <span class="indicator"></span>
+                    <h4 class="text">PRECISE MATERIALS FOR THE MOST EXTREME APPLICATIONS</h4>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="title variant-p2">
+                    <span class="indicator"></span>
+                    <h3 class="text">CHARACTERISTICS</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-4">
+                {% include "templates/components/blockquote-variant-milestone.twig" %}
+            </div>
+            <div class="col-8">
+                {% include "templates/components/blockquote-variant-hero.twig" %}
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5">
+        <p class="badge badge-primary">Cards</p>
+
+        <div class="row">
+            <div class="col-6">
+                <div class="card variant-1 horizontal">
+                    <div class="img-wrapper">
+                        <img src="assets/img/warehouse.png" alt="">
+                    </div>
+                    <a href="#" class="btn btn-primary card-cta">VISIT MAXSTEEL</a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card variant-1 vertical">
+                    <div class="img-wrapper">
+                        <img src="assets/img/welding.png" alt="">
+                    </div>
+                    <a href="#" class="btn btn-primary card-cta">VISIT MAXSTEEL</a>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card variant-1 vertical">
+                    <div class="img-wrapper">
+                        <img src="assets/img/steel-rolls.png" alt="">
+                    </div>
+                    <a href="#" class="btn btn-secondary card-cta">VISIT MAXSTEEL</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                {% include "templates/components/card-variant-2.twig" %}
+            </div>
+        </div>
+    </div>
+
+    <div class="my-5">
+        <p class="badge badge-primary">Components</p>
+        <div class="row">
+            <div class="col-4">
+                <p>Buttons</p>
+                <button class="btn btn-default btn-primary">View Products</button>
+                <button class="btn btn-default btn-secondary">View Products</button>
+            </div>
+            <div class="col-4">
+                <p>Links</p>
+                <a href="#">+65 8123 4567</a>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

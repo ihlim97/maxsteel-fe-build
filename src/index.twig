@@ -1,0 +1,73 @@
+{% extends "templates/partials/base.twig" %}
+
+{% block main %}
+
+    {% include "templates/components/carousel-variant-hero.twig" %}
+
+    <div class="container-fluid px-3 px-md-5 pt-5">
+        <div class="row mb-5">
+            <div class="col-12 col-md-5 d-flex flex-column">
+                {% embed "templates/components/title.twig" with { 
+                    colourVariant: 'p1',
+                } %}
+                    {% block text %}
+                        <h3 class="text">PRECISE, ACCURATE AND EXPERT STEEL MANUFACTURING.</h3>
+                    {% endblock %}
+                {% endembed %}
+                <div class="vertical-line"></div>
+            </div>
+            <div class="col-12 col-md-7">
+                {% include "templates/components/card-variant-1.twig" with {
+                    orientation: 'horizontal',
+                    image: 'assets/img/warehouse.png',
+                    ctaText: 'VISIT MAXSTEEL'
+                } %}
+                <div class="row pt-4">
+                    <div class="col-12 col-md-6">
+                        {% include "templates/components/card-variant-1.twig" with {
+                            orientation: 'vertical',
+                            image: 'assets/img/welding.png',
+                            ctaText: 'VISIT MAXSTEEL'
+                        } %}
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {% include "templates/components/card-variant-1.twig" with {
+                            orientation: 'vertical',
+                            image: 'assets/img/steel-rolls.png',
+                            ctaText: 'VISIT MAXSTEEL'
+                        } %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-5">
+                {% embed "templates/components/title.twig" with {
+                    colourVariant: 'p1'
+                } %}
+                    {% block text %}
+                        <h3 class="text">SOME OF THE CLIENTS WE HAVE HAD THE PRIVILEGE TO WORK WITH</h3>
+                    {% endblock %}
+                {% endembed %}
+            </div>
+            <div class="col-12 col-md-6 offset-md-1 mt-5 pt-5">
+                {% set logos = [
+                    'western-digital.png',
+                    'apple.png',
+                    'honda.png',
+                    'huawei.png',
+                    'samsung.png',
+                    'panasonic.png',
+                    'sony.png',
+                    'toyota.png'
+                ] %}
+                <div class="d-flex flex-wrap client-logos">
+                    {% for logo in logos %}
+                        <img src="assets/img/{{logo}}" alt="" class="img-fluid">
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

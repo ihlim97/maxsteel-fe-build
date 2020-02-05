@@ -1,0 +1,41 @@
+.lk1 {
+    transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-property: color;
+    position: relative;
+    padding-bottom: 2px;
+    
+    &::before {
+        content: '';
+        background-color: currentColor;
+        width: 0;
+        position: absolute;
+        height: 2px;
+        right: 0;
+        // left: 0;
+        bottom: 0;
+        transition: 0.2s ease-in-out;
+        transition-property: background-color, width;
+    }
+
+    &:hover {
+
+        &.p1 {
+            color: darken($p1, 10%);
+        }
+
+        &.p2 {
+            color: darken($p2, 10%);
+        }
+
+        &.w {
+            color: darken(#fff, 10%);
+        }
+
+        text-decoration: none;
+        
+        &::before {
+            right: auto;
+            width: 100%;
+        }
+    }
+}

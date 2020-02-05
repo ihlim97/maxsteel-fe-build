@@ -1,0 +1,6 @@
+main,
+footer {
+    @include media-breakpoint-up(lg) {
+        padding-left: 100px;
+    }
+}

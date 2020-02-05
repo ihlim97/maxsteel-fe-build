@@ -1,0 +1,22 @@
+.social-sharing {
+    display: flex;
+    justify-content: center;
+
+    .social-icon-wrapper {
+        padding: 10px;
+        background-color: $p1;
+        transition: 0.3s ease;
+
+        a {
+            display: flex;
+        }
+
+        svg {
+            fill: #fff;
+        }
+
+        &:hover {
+            background-color: $p2;
+        }
+    }
+}

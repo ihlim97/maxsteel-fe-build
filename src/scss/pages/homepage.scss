@@ -1,0 +1,25 @@
+.vertical-line {
+    height: 100%;
+    flex: 1;
+    padding-top: 50px;
+
+    &::before {
+        width: 1px;
+        height: 100%;
+        margin-left: 150px;
+        background-color: $p1;
+        content: '';
+        display: block;
+    }
+}
+
+.client-logos {
+    img {
+        flex: calc(100% / 3);
+        align-content: center;
+        justify-items: center;
+        object-fit: scale-down;
+        object-position: left;
+        margin-bottom: 3rem;
+    }
+}

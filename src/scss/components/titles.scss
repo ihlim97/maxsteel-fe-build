@@ -1,0 +1,40 @@
+.title {
+    span.indicator {
+        height: 15px;
+        width: 75px;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    &.variant-p1 {
+        span.indicator {
+            background-color: $p2;
+        }
+
+        color: $p1;
+    }
+
+    &.variant-p2 {
+        span.indicator {
+            background-color: $p1;
+        }
+
+        color: $p2;
+    }
+
+    &.variant-p1-alt {
+        span.indicator {
+            background-color: $p2;
+        }
+
+        color: #fff;
+    }
+    
+    &.variant-p2-alt {
+        span.indicator {
+            background-color: $p1;
+        }
+        
+        color: #fff;
+    }
+}
