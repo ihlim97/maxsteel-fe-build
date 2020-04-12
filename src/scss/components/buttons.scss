@@ -1,10 +1,14 @@
 .btn {
-    min-width: 210px;
     text-transform: uppercase;
     
+    &.btn-primary {
+        min-width: 210px;
+    }
+
     &.btn-secondary {
         color: #fff;
-    
+        min-width: 210px;
+
         &:hover,
         &:active,
         &:focus {
@@ -14,6 +18,7 @@
 
     &.btn-arrow {
         display: flex;
+        min-width: 210px;
         justify-content: space-between;
         align-items: center;
 

@@ -21,9 +21,24 @@ module.exports = merge(common, {
             {
                 test: /\.twig$/,
                 use: [
-                    'html-loader',
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            attrs: [':src']
+                        }
+                    },
                     'twig-html-loader'
                 ]
+            },
+            {
+                test: /\.(mp4)$/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "[name].[hash].[ext]",
+                        outputPath: "assets/videos"
+                    }
+                }
             },
             {
                 test: /\.(svg|png|jpg|jpeg|gif)$/,

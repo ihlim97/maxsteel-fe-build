@@ -2,7 +2,9 @@
 
 {% block main %}
 
-    {% include "templates/components/carousel-variant-hero.twig" %}
+    {% include "templates/components/header-variant-video.twig" %}
+
+    {# {% include "templates/components/carousel-variant-hero.twig" %} #}
 
     <div class="container-fluid px-3 px-md-5 pt-5">
         <div class="row mb-5">
@@ -27,20 +29,36 @@
                         {% include "templates/components/card-variant-1.twig" with {
                             orientation: 'vertical',
                             image: 'assets/img/welding.png',
-                            ctaText: 'VISIT MAXSTEEL'
+                            ctaText: 'Services'
                         } %}
                     </div>
                     <div class="col-12 col-md-6">
                         {% include "templates/components/card-variant-1.twig" with {
                             orientation: 'vertical',
                             image: 'assets/img/steel-rolls.png',
-                            ctaText: 'VISIT MAXSTEEL'
+                            ctaText: 'Products'
                         } %}
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="container-fluid px-3 px-md-5 bg-gray-200 py-5">
+        <div class="row">
+            <div class="col-12 pt-md-5">
+                {% embed "templates/components/title.twig" with {
+                    colourVariant: 'p1 pt-md-5'
+                } %}
+                    {% block text %}
+                        <h3 class="text">WHY CHOOSE US</h3>
+                    {% endblock %}
+                {% endembed %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-3 px-md-5 pt-5">
         <div class="row">
             <div class="col-12 col-md-5">
                 {% embed "templates/components/title.twig" with {
@@ -58,9 +76,7 @@
                     'honda.png',
                     'huawei.png',
                     'samsung.png',
-                    'panasonic.png',
-                    'sony.png',
-                    'toyota.png'
+                    'panasonic.png'
                 ] %}
                 <div class="d-flex flex-wrap client-logos">
                     {% for logo in logos %}

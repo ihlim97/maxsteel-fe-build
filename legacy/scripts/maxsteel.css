@@ -1,0 +1,193 @@
+/*  backgrounds   */
+
+.bg_content {
+	background-color: #FFFFFF;
+	background-image: url(../images/site/content_bg.jpg);
+	background-repeat: no-repeat;
+}
+
+.bg_navigation {
+	background-image: url(../images/site/navigation_loading.jpg);
+	background-repeat: no-repeat;
+}
+
+.bg_weblocation {
+	background-color: #FFFFFF;
+	background-image: url(../images/site/web_address.jpg);
+	background-repeat: no-repeat;
+}
+.bg_homepage {
+	background-image: url(../images/site/homepage_bg.jpg);
+	background-repeat: no-repeat;
+}
+.bg_footer {
+	background-image: url(../images/site/maxsteel_footer.jpg);
+	background-repeat: no-repeat;
+}
+
+/*  TEXT   */
+
+.text_weblocation {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 9pt;
+	color: #4E4E4E;
+	text-decoration: none;
+	text-align: left;
+	text-indent: 15pt;
+}
+
+.text_headers {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14pt;
+	color: #0E2958;
+	text-align: left;
+}
+.text_secondary_headers {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #4B4B4B;
+	text-align: left;
+}
+
+.text_content {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10pt;
+	color: #404040;
+}
+.text_content a:link{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10pt;
+	color: #3399FF;
+	text-decoration: none;
+}
+.text_content a:visited{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10pt;
+	color: #3399FF;
+	text-decoration: none;
+}
+.text_content a:active{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10pt;
+	color: #3399FF;
+	text-decoration: none;
+}
+.text_content a:hover{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10pt;
+	color: #D59102;
+	text-decoration: none;
+}
+
+.text_content_small {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 8pt;
+	color: #404040;
+}
+
+/*  LAYOUT CELL   */
+
+.cell_content_area {
+	text-align: justify;
+	padding-top: 0pt;
+	padding-right: 30pt;
+	padding-bottom: 0pt;
+	padding-left: 30pt;
+}
+
+.cell_half_content_area_left {
+	text-align: left;
+	padding-top: 0pt;
+	padding-right: 0pt;
+	padding-bottom: 0pt;
+	padding-left: 30pt;
+}
+
+.cell_half_content_area_right {
+	text-align: left;
+	padding-top: 0pt;
+	padding-right: 30pt;
+	padding-bottom: 0pt;
+	padding-left: 15pt;
+}
+
+.cell_homepage_left {
+	text-align: left;
+	padding-top: 10pt;
+	padding-right: 0pt;
+	padding-bottom: 0pt;
+	padding-left: 65pt;
+}
+.cell_homepage_right {
+	text-align: left;
+	padding-top: 10pt;
+	padding-right: 0pt;
+	padding-bottom: 0pt;
+	padding-left: 45pt;
+}
+
+/*  SECTIONS Specific CSS   */
+
+.text_company_structure_blue {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10pt;
+	color: #1A4F8E;
+	line-height: 14pt;
+	text-align: left;
+}
+.text_company_structure_grey {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10pt;
+	color: #6A6A6A;
+	line-height: 14pt;
+	text-align: left;
+}
+
+.text_careers_headers {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 10pt;
+	color: #1B4FA5;
+	text-align: left;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+}
+.text_content_lists {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 9pt;
+	color: #404040;
+	line-height: 15pt;
+}
+
+.text_form {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 9pt;
+	color: #154464;
+}
+
+.text_specifications_blue {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 8pt;
+	color: #1A4F8E;
+	text-align: left;
+}
+
+.text_specifications_grey {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 8pt;
+	color: #6A6A6A;
+	text-align: left;
+}
+
+.li_custom {
+	list-style-position: outside;
+	list-style-image: url(../images/site/list_line.gif);
+}
+
+
+/*  COLORS   */
+
+.color_blue {
+	color: #1D5F8B;
+}
