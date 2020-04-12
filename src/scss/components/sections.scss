@@ -23,6 +23,22 @@
         }
     }
 
+    &.reversed {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 0;
+
+        .image {
+            position: relative;
+            width: 100%;
+
+            &::before {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+
     @include media-breakpoint-up(md) {
         margin-bottom: 150px;
 
@@ -38,6 +54,21 @@
             &::before {
                 bottom: -1rem;
                 top: auto;
+            }
+        }
+
+        &.reversed {
+            margin-bottom: 150px;
+
+            .image {
+                position: absolute;
+                left: 0;
+                right: auto;
+                width: 60%;
+
+                &::before {
+                    right: -1rem;
+                }
             }
         }
     }
@@ -57,6 +88,14 @@
             &::before {
                 height: 90%;
                 width: 90%;
+            }
+        }
+
+        &.reversed {
+            margin-bottom: 300px;
+            
+            .image {
+                width: 55%;
             }
         }
     }

@@ -1,0 +1,62 @@
+{% extends "templates/partials/base.twig" %}
+
+{% block main %}
+
+<div class="container-fluid px-3 px-md-5 py-5">
+    <div class="row">
+        <div class="col-12">
+            <a href="/services.html" class="btn btn-link p1 variant-back">
+                {% include "templates/components/icon.twig" with {
+                    iconName: 'chevron-back',
+                    iconSize: 's'
+                } %}
+                <div class="title">SERVICES</div>
+            </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <h1 class="h3 p2">SERVICE 1</h1>
+        </div>
+    </div>
+</div>
+
+<div class="section variant-1 reversed">
+    <div class="container-fluid content pt-md-5">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-4 col-lg-6 offset-lg-6 bg-p1 mt-md-5 px-3 py-5 px-md-5 py-md-5">
+                <p class="w">Electrolytic zinc coated steel is commonly known in the market as electro-galvanized steel or EG in short. The base material for EG is normally cold rolled steel, hot rolled based also exists.</p>
+                <p class="w">As its name suggests, the cold rolled steel undergoes surface treatment via electro galvanizing as well as other pre and post treatment process to improve the material characteristics.</p>
+                <p class="w">Different chemical post treatments allow a spectrum of varying material properties. EG offered by MaxSteel is certified 100% chromate-free and ROHS compliant.</p>
+            </div>
+        </div>
+    </div>
+    <div class="image">
+        <div class="img-aspect-ratio variant-3:3">
+            <img src="assets/img/steel-rolls-2.jpg" alt="Steel Rolls">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-3 px-md-5 pt-5 pb-4">
+    {% embed "templates/components/title.twig" with {
+        colourVariant: 'p1'
+    } %}
+        {% block text %}
+            <h3>PROCESS</h3>
+        {% endblock %}
+    {% endembed %}
+</div>
+
+<div class="responsive-iframe mb-5">
+    <iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/BuJSY6x1rYg?autoplay=1&mute=1&controls=0"
+        frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<br>
+<br>
+
+{% endblock %}
