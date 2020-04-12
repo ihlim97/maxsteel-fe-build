@@ -108,7 +108,7 @@ header {
         @include media-breakpoint-up (lg) {
             transform: translateX(-100%);
             left: 100px;
-            padding: 150px;
+            padding: 78px;
 
             &.active {
                 transform: translateX(0)
