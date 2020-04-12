@@ -137,6 +137,13 @@ header {
                 color: $p2;
             }
         }
+
+        .second-level {
+            padding-top: 1rem;
+            a:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
     }
 
     &::before {

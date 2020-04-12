@@ -21,4 +21,6 @@ $(function() {
         $('#salesEnquiryModal').modal('show')
     })
 
+    // $hamburger.trigger('click')
+
 })
