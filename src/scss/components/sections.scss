@@ -1,10 +1,63 @@
 .section.variant-1 {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 270px;
     
+    .content {
+        position: relative;
+    }
+
     .image {
-        @include media-breakpoint-up(md) {
-            margin-top: -23%;
+        position: absolute;
+        width: 80%;
+        right: 0;
+        top: calc(100% - 1rem);
+
+        &::before {
+            content: '';
+            background-color: $p2;
+            height: 80%;
+            width: 80%;
+            position: absolute;
+            top: -1rem;
+            left: -1rem;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 150px;
+
+        .content {
+            z-index: 1;
+        }
+
+        .image {
+            position: absolute;
+            top: 50%;
+            width: 60%;
+    
+            &::before {
+                bottom: -1rem;
+                top: auto;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .image {
+            top: 0;
+        }
+    }
+
+    @media (min-width: 1600px) {
+        margin-bottom: 350px;
+
+        .image {
+            width: 52%;
+            
+            &::before {
+                height: 90%;
+                width: 90%;
+            }
         }
     }
 }

@@ -1,0 +1,209 @@
+{% extends "templates/partials/base.twig" %}
+
+{% block main %}
+<div class="container-fluid px-3 px-md-5 pt-5 pb-4">
+    <div class="row">
+        <div class="col-12">
+            <a href="/products.html" class="btn btn-link p1 variant-back">
+                {% include "templates/components/icon.twig" with {
+                    iconName: 'chevron-back',
+                    iconSize: 's'
+                } %}
+                <div class="title">PRODUCTS</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="section variant-1">
+    <div class="container-fluid content">
+        <div class="row">
+            <div class="col-12 px-3 px-md-5">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h2 class="h3 p2 mb-4 mt-3">ELECTROLYTIC ZINC COATED STEEL</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-lg-6 bg-p1 px-3 px-md-5 pb-5 pb-md-4 pt-4">
+                <p class="w">Electrolytic zinc coated steel is commonly known in the market as electro-galvanized steel or EG in short. The base material for EG is normally cold rolled steel, hot rolled based also exists.</p>
+                <p class="w">As its name suggests, the cold rolled steel undergoes surface treatment via electro galvanizing as well as other pre and post treatment process to improve the material characteristics.</p>
+                <p class="w">Different chemical post treatments allow a spectrum of varying material properties. EG offered by MaxSteel is certified 100% chromate-free and ROHS compliant.</p>
+            </div>
+        </div>
+    </div>
+    <div class="image">
+        <div class="img-aspect-ratio variant-3:3">
+            <img src="assets/img/steel-rolls-2.jpg" alt="Steel Rolls">
+        </div>
+    </div>
+</div>
+
+<div class="section variant-2 mb-5">
+    <div class="background">
+        <img src="assets/img/hot-rolled-steel.png" alt="" class="rellax" data-rellax-speed="3" data-rellax-xs-speed="0">
+    </div>
+    <div class="content container-fluid rellax" data-rellax-speed="0.5">
+        <div class="row">
+            <div class="col-11 col-md-7 offset-md-5 bg-p1 p-5">
+                {% embed "templates/components/title.twig" with {
+                    colourVariant: 'p1-alt'
+                } %}
+                    {% block text %}
+                        <h3>CHARACTERISTICS</h3>
+                    {% endblock %}
+                {% endembed %}
+                <p class="w mb-0">The general appearance of EG is a very smooth finish and attractive coat of light gray. Common attributes include good corrosion resistance, formability, conductivity, printability/paint adhesion and post treatments i.e. antifinger.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section variant-3">
+    <div class="background">
+        <div class="container-fluid no-gutters">
+            <div class="row">
+                <div class="col-12 col-md-5 px-0">
+                    <div class="img-aspect-ratio variant-4:3 image-1 rellax" 
+                        data-rellax-speed=".7"
+                        data-rellax-xs-speed=".4">
+                        <img src="assets/img/steel-factory-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 px-0">
+                    <div class="img-aspect-ratio variant-16:9 image-2 rellax" 
+                        data-rellax-speed="-.8"
+                        data-rellax-xs-speed="-.2">
+                        <img src="assets/img/technology-discussion-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+                <div class="col-11 col-md-6 bg-p1 p-5">
+                    {% embed "templates/components/title.twig" with {
+                        colourVariant: 'p1-alt'
+                    } %}
+                        {% block text %}
+                            <h3>APPLICATIONS</h3>
+                        {% endblock %}
+                    {% endembed %}
+                    <p class="w">EG is mainly used for electrical appliances, office equipments, computers, automotive parts, architectural, furniture and others.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-3 px-md-5 pt-5 pb-4">
+    {% embed "templates/components/title.twig" with {
+        colourVariant: 'p1'
+    } %}
+        {% block text %}
+            <h3>PROCESS</h3>
+        {% endblock %}
+    {% endembed %}
+</div>
+
+<div class="responsive-iframe">
+    <iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/BuJSY6x1rYg?autoplay=1&mute=1&controls=0"
+        frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<div class="container-fluid px-3 px-md-5 py-5 mt-5">
+    <div class="row">
+        <div class="col-12 col-lg-4 mb-md-4">
+            {% embed "templates/components/title.twig" with {
+                colourVariant: 'p1'
+            } %}
+                {% block text %}
+                    <h3>SPECIFICATIONS</h3>
+                {% endblock %}
+            {% endembed %}
+        </div>
+        <div class="col-12 col-lg-8">
+            <ul class="list variant-specifications">
+                <li class="specification-item">
+                    <svg class="icon icon-9xl">
+                        <use xlink:href="assets/icons/icons.svg#sprite-steel-roll" href="assets/icons/icons.svg#sprite-steel-roll"></use>
+                    </svg>
+                    <p class="h6 p1 title">COMMON STOCK</p>
+                    <p>SECC (JIS G3313)</p>
+                </li>
+                <li class="specification-item">
+                    <svg class="icon icon-9xl">
+                        <use xlink:href="assets/icons/icons.svg#sprite-measurement" href="assets/icons/icons.svg#sprite-measurement"></use>
+                    </svg>
+                    <p class="h6 p1 title">CORRESPONDING STANDARD</p>
+                    <p>ASTM A591-CQ</p>
+                </li>
+                <li class="specification-item">
+                    <svg class="icon icon-9xl">
+                        <use xlink:href="assets/icons/icons.svg#sprite-dimensions" href="assets/icons/icons.svg#sprite-dimensions"></use>
+                    </svg>
+                    <p class="h6 p1 title">Applicable nominal thickness</p>
+                    <p>SECC (JIS G3313)</p>
+                </li>
+                <li class="specification-item">
+                    <svg class="icon icon-9xl">
+                        <use xlink:href="assets/icons/icons.svg#sprite-width" href="assets/icons/icons.svg#sprite-width"></use>
+                    </svg>
+                    <p class="h6 p1 title">Width available</p>
+                    <p>&lt; 1,250mm</p>
+                </li>
+                <li class="specification-item variant-wider">
+                    <div class="row align-items-start">
+                        <div class="col-12 col-md-6 d-flex flex-column align-items-center">
+                            <svg class="icon icon-9xl">
+                                <use xlink:href="assets/icons/icons.svg#sprite-stack" href="assets/icons/icons.svg#sprite-stack"></use>
+                            </svg>
+                            <p class="h6 p1 title">Common options available</p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <p class="text-left">SECC-AC (Antifinger Conductivity)</p>
+                            <p class="text-left">SECC-AF (Antifinger Formability)</p>
+                            <p class="text-left">SECC-AM (Antifinger Modified)</p>
+                            <p class="text-left">SECC-P (Phosphate Treatment)</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-5">
+            {% embed "templates/components/title.twig" with {
+                colourVariant: 'p1'
+            } %}
+                {% block text %}
+                    <h3>AT THE FOREFRONT OF QUALITY MANUFACTURING</h3>
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+
+    <div class="row align-items-center py-5">
+        <div class="col-4 col-md-3 text-center">
+            <img src="assets/img/iso-logo.png" alt="Certification Logo" class="img-fluid">
+        </div>
+        <div class="col-4 col-md-3 text-center">
+            <img src="assets/img/rohs-logo.png" alt="Certification Logo" class="img-fluid">
+        </div>
+        <div class="col-4 col-md-3 text-center">
+            <img src="assets/img/iso-logo.png" alt="Certification Logo" class="img-fluid">
+        </div>
+        <div class="col-4 col-md-3 text-center">
+            <img src="assets/img/rohs-logo.png" alt="Certification Logo" class="img-fluid">
+        </div>
+    </div>
+</div>
+{% endblock %}

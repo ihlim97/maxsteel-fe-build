@@ -103,4 +103,48 @@
             }
         }
     }
+
+    &.variant-specifications {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+
+        .specification-item {
+            padding-right: 1rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 3rem;
+            width: calc(100% / 2);
+
+            .icon {
+                margin-bottom: 2rem;
+            }
+
+            .title {
+                min-height: 3rem;
+                border-left: 1.5px solid $p2;
+                width: 100%;
+                padding: 0 1rem;
+                text-transform: uppercase;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            &.variant-wider {
+                width: 100%;
+            }
+
+            @include media-breakpoint-up(md) {
+                width: calc(100% / 3);
+
+                &.variant-wider {
+                    width: calc(100% / 3 * 2);
+                }
+            }
+        }
+    }
 }
