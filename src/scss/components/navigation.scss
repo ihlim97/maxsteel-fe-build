@@ -24,6 +24,10 @@ header {
             height: 100px;
             width: calc(100% - 100px);
         }
+        
+        .spacer {
+            flex-grow: 1;
+        }
     }
 
     nav.left-pane {
@@ -139,6 +143,29 @@ header {
 
         @include media-breakpoint-up(lg) {
             left: 100px;
+        }
+    }
+
+    .dropdown.variant-language-toggle {
+        margin-right: calc(1rem + 40px); // spacing + button left padding + button width
+
+        @include media-breakpoint-up(md) {
+            margin-right: 1rem;
+        }
+
+        .btn {
+            font-size: $h6-font-size;
+            font-weight: 600;
+            color: #000;
+
+            &.dropdown-toggle::after {
+                color: $p1;
+            }
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
         }
     }
 }
