@@ -1,0 +1,46 @@
+{% extends "templates/partials/base.twig" %}
+
+{% block main %}
+
+<div class="container-fluid px-3 px-md-5 py-5">
+    <div class="row">
+        <div class="col-12">
+            <a href="/what-we-do.html" class="btn btn-link p1 variant-back">
+                {% include "templates/components/icon.twig" with {
+                    iconName: 'chevron-back',
+                    iconSize: 's'
+                } %}
+                <div class="title">WHAT WE DO</div>
+            </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <h1 class="h3 p2">SERVICES</h1>
+            <p>MAXSTEEL creates and maintains geographical information, maps and charts. We develop solutions to deliver data, information and products in innovative ways.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-3 px-md-5 pt-md-5 pb-5">
+    <div class="list variant-services">
+        {% for index in 1..6 %}
+            <div class="list-item">
+                <a href="#" class="no-text-decoration">
+                    <div class="card variant-3">
+                        <div class="card-thumbnail">
+                            <img src="assets/img/welding.png" alt="welding">
+                        </div>
+                        <div class="card-cta">
+                            <div class="cta-title">SERVICES {{ index }}</div>
+                            {% include "templates/components/icon.twig" with {
+                                iconName: 'right-arrow',
+                                iconSize: 'm p2'
+                            } %}
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

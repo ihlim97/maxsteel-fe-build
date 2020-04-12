@@ -57,3 +57,12 @@ ol.roman {
 .bg-gray-900 {
     background-color: $gray-900;
 }
+
+.no-text-decoration {
+    text-decoration: none;
+    
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
