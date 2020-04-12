@@ -15,3 +15,4 @@ import "bootstrap";
 import "./components/navigation";
 import "./components/carousels";
 import "./components/parallax";
+import "./components/forms";

@@ -1,0 +1,18 @@
+ul.list.variant-icon {
+    list-style-type: none;
+    padding-left: 0;
+
+    .list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        .content {
+            padding-left: 1.8rem;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

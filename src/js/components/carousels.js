@@ -35,9 +35,14 @@ const variant2 = new Swiper('.carousel.variant-products', {
 })
 
 const variant3 = new Swiper('.carousel.variant-timeline', {
-    slidesPerView: 3,
+    slidesPerView: 2,
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 3
+        }
     }
 })

@@ -1,0 +1,215 @@
+<!-- Modal -->
+<div class="modal fade variant-xl-fullscreen sales-enquiry" id="salesEnquiryModal" tabindex="-1" role="dialog" aria-labelledby="salesEnquiryModalTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document" id="enquiryFormBody">
+		<div class="modal-content">
+			<div class="modal-header">
+                <h5 class="modal-title p2 text-uppercase" id="salesEnquiryModalTitle">Sales Enquiry Form</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">
+						<svg class="icon">
+							<use href="assets/icons/icons.svg#sprite-close"></use>
+						</svg>
+					</span>
+				</button>
+			</div>
+			<div class="modal-body">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide px-1">
+                            <form action="">
+                                <div class="d-flex align-items-center mb-4">
+                                    <h6 class="p1 flex-shrink-0 mr-4 mb-0">REQUEST FOR QUOTATION</h6>
+                                    <div class="divider"></div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="textarea-material">Material</label>
+                                            <textarea name="material" id="textarea-material" cols="30" rows="3" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="textarea-specification">Specification</label>
+                                            <textarea name="specification" id="textarea-specification" cols="30" rows="3" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="textarea-coating-colour">Coating / Colour (if any)</label>
+                                            <textarea name="coating-colour" id="textarea-coating-colour" cols="30" rows="3" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="textarea-size">Size</label>
+                                            <textarea name="size" id="textarea-size" cols="30" rows="3" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="textarea-thickness-tolerance">Thickness Tolerance</label>
+                                            <textarea name="thickness-tolerance" id="textarea-thickness-tolerance" cols="30" rows="3" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="textarea-width-tolerance">Width Tolerance</label>
+                                            <textarea name="width-tolerance" id="textarea-width-tolerance" cols="30" rows="3" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="textarea-monthly-quantity-requirement">Monthly Quantity Requirement</label>
+                                            <textarea name="monthly-quantity-requirement" id="textarea-monthly-quantity-requirement" cols="30" rows="3" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="textarea-end-product">End Product</label>
+                                            <textarea name="end-product" id="textarea-end-product" cols="30" rows="3" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="swiper-slide px-1">
+                            <form action="">
+                                <div class="d-flex align-items-center mb-4">
+                                    <h6 class="p1 flex-shrink-0 mr-4 mb-0">PERSONAL DETAILS</h6>
+                                    <div class="divider"></div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-12 col-md-6">
+                                        <p>Are you an existing MaxSteel customer?</p>
+                                        <div class="d-flex mb-3">
+                                            <div class="form-check mr-5">
+                                                <input class="form-check-input" type="radio" name="isExistingCustomer" id="chk-existing-cust-1" value="yes" checked>
+                                                <label class="form-check-label" for="chk-existing-cust-1">
+                                                    Yes
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="isExistingCustomer" id="chk-existing-cust-2" value="no">
+                                                <label class="form-check-label" for="chk-existing-cust-2">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="row">
+                                            <div class="col-6 col-md-3">
+                                                <div class="form-group">
+                                                    <label for="sel-salutation">Salutation</label>
+                                                    <select name="salutation" id="sel-salutation" class="form-control">
+                                                        <option value="Mr.">Mr.</option>
+                                                        <option value="Mrs.">Mrs.</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="input-first-name">First Name</label>
+                                            <input class="form-control" type="text" id="input-first-name" name="firstName">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="input-last-name">Last Name</label>
+                                            <input class="form-control" type="text" id="input-last-name" name="lastName">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="input-company">Company</label>
+                                            <input class="form-control" type="text" id="input-company" name="company">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="input-designation">Designation</label>
+                                            <input class="form-control" type="text" id="input-designation" name="designation">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="input-email">Email</label>
+                                            <input class="form-control" type="email" id="input-email" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="input-country">Country</label>
+                                            <select name="country" id="sel-country" class="form-control">
+                                                <option value="" disabled hidden selected>Select Country</option>
+                                                <option value="Singapore">Singapore</option>
+                                                <option value="Malaysia">Malaysia</option>
+                                                <option value="China">China</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="input-city-state">City / State</label>
+                                            <input class="form-control" type="text" id="input-city-state" name="cityState">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="input-phone">Phone</label>
+                                            <input class="form-control" type="tel" id="input-phone" name="phone">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="input-fax">Fax</label>
+                                            <input class="form-control" type="text" id="input-fax" name="fax">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="input-website">Website</label>
+                                            <input class="form-control" type="text" id="input-website" name="website">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="textarea-enquiries">Your Enquiries: *</label>
+                                            <textarea name="enquiries" id="textarea-enquiries" cols="30" rows="5" class="form-control" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+                <button type="button" class="btn btn-secondary" v-if="currStep === 'quote'" @click="setCurrStep('personal')">Next</button>
+				<button type="button" class="btn btn-light" v-if="currStep === 'personal'" @click="setCurrStep('quote')">Back</button>
+				<button type="button" class="btn btn-secondary"  v-if="currStep === 'personal'">Submit</button>
+			</div>
+		</div>
+	</div>
+</div>

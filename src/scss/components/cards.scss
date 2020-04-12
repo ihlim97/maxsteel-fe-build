@@ -7,6 +7,20 @@
         .img-wrapper {
             position: relative;
             
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: block;
+                background-color: transparent;
+                visibility: hidden;
+                z-index: 1;
+                transition: 0.1s ease;
+            }
+            
             img {
                 position: absolute;
                 width: 100%;
@@ -21,6 +35,8 @@
             bottom: 0;
             right: 10%;
             transform: translateY(50%);
+            transition: 0.2s ease;
+            z-index: 2;
         }
 
         &.horizontal .img-wrapper {
@@ -35,6 +51,25 @@
             .card-cta {
                 right: 50%;
                 transform: translateY(50%) translateX(50%);
+            }
+        }
+
+        &:hover {
+            .img-wrapper {
+                &::before {
+                    visibility: visible;
+                    background-color: transparentize($color: #fff, $amount: .9);
+                }
+            }
+
+            .card-cta {
+                transform: translateY(43%)
+            }
+
+            &.vertical {
+                .card-cta {
+                    transform: translateY(43%) translateX(50%)
+                }
             }
         }
     }

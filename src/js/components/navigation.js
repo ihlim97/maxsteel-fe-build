@@ -16,4 +16,9 @@ $(function() {
         $('body').toggleClass('nav-open')
     })
 
+    $drawer.find('.sales-cta').on('click', function() {
+        $hamburger.trigger('click')
+        $('#salesEnquiryModal').modal('show')
+    })
+
 })
