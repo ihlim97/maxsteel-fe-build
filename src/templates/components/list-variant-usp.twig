@@ -1,0 +1,13 @@
+<ul class="list variant-usp">
+    {% set iconNames = ['factory', 'engineering-process', 'champion', 'strategy-plan'] %}
+    {% for icon in iconNames %}
+        <li class="list-item">
+            {% include "icon.twig" with {
+                iconSize: '9xl my-4 my-md-5',
+                iconName: icon
+            } %}
+            <p class="mb-3 p1 h6 text-uppercase">Lorem, ipsum dolor.</p>
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel exercitationem ipsum temporibus praesentium recusandae et?</p>
+        </li>
+    {% endfor %}
+</ul>
