@@ -1,5 +1,6 @@
 $hamburger-types: (squeeze);
 $hamburger-layer-border-radius: 0;
+$hamburger-layer-color: $p1;
 $hamburger-layer-height: 1px !default;
 $hamburger-layer-spacing: 8px !default;
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
@@ -30,6 +31,10 @@ header {
         z-index: 2;
         right: 0;
         top: 1rem;
+
+        .hamburger-inner {
+            height: 2px;
+        }
 
         .hamburger:focus {
             outline: none;
