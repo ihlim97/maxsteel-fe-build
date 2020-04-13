@@ -153,3 +153,99 @@
         }
     }
 }
+
+.carousel.variant-media {
+    .swiper-button-next {
+        right: 0;
+        
+        svg {
+            transform: rotate(180deg);
+        }
+
+        &:hover {
+            svg {
+                transform: rotate(180deg) translateX(-5px);
+            }
+        }
+    }
+
+    .swiper-button-prev {
+        left: 0;
+
+        &:hover {
+            svg {
+                transform: translateX(-5px);
+            }
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        height: 40px;
+        width: 100px;
+        background-color: $p1;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        svg {
+            fill: $p2;
+            height: calc(100% - 25px);
+            width: 100%;
+            transition: 0.3s ease;
+        }
+
+        @include media-breakpoint-up (md) {
+            width: 140px;
+
+            svg {
+                height: calc(100% - 20px);
+            }
+        }
+    }
+
+    .swiper-pagination {
+        width: 100px;
+        height: 70px;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 18px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        right: 6rem;
+        z-index: 2;
+        position: absolute;
+
+        .swiper-pagination-current {
+            margin-right: 3px;
+        }
+
+        .swiper-pagination-total {
+            margin-left: 3px;
+        }
+    }
+
+    .slide-layout {
+        height: calc(100vh - 200px); // minus top pane, minue half a button, then minus the pagination
+        min-height: 500px;
+
+        .slide-background {
+            position: relative;
+            height: 100%;
+            width: 100%;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

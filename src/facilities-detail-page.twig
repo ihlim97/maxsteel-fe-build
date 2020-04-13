@@ -1,0 +1,42 @@
+{% extends "templates/partials/base.twig" %}
+
+{% block main %}
+
+<div class="container-fluid px-3 px-md-5 py-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="/facilities.html" class="btn btn-link p1 variant-back">
+                {% include "templates/components/icon.twig" with {
+                    iconName: 'chevron-back',
+                    iconSize: 's'
+                } %}
+                <div class="title">FACILITIES</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% include "templates/components/carousel-variant-media.twig" %}
+
+<div class="container-fluid px-3 px-md-5 mt-4 py-5">
+    <div class="row mb-5">
+        <div class="col-12 col-md-9">
+            <h1 class="h3 p1 text-uppercase">Sed ut perspiciatis unde omnis iste natus error sit</h1>
+        </div>
+        <div class="col-12 offset-md-1 col-md-2 pt-1">
+            {% include "templates/components/list-variant-social.twig" %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, quam ipsum. Perferendis impedit labore consequuntur accusamus animi, maiores doloribus iure ut debitis et expedita voluptatibus, necessitatibus quisquam! Ullam provident excepturi sequi maiores vitae vel corrupti eveniet necessitatibus distinctio accusamus voluptates quaerat, saepe similique illum nulla esse reprehenderit animi praesentium vero!</p>
+            <p>Quidem commodi id quas ab minus doloremque quis reprehenderit illum aperiam vel dolorem quisquam, fuga deserunt recusandae, aliquam cum voluptates eligendi quos provident illo ratione consectetur error! Illum, impedit voluptas! Velit, cupiditate deserunt non nisi sint delectus soluta ad nostrum rerum fugiat aliquam, impedit quam autem saepe consequuntur ipsam excepturi!</p>
+            <p>Consectetur maxime expedita sapiente rem deleniti minima dolores iste exercitationem illo illum earum facilis, hic ut nesciunt. Cum saepe totam illum modi quod doloremque culpa, pariatur, ratione sunt accusamus et dicta iusto provident? Repellendus explicabo quidem ex, nam corrupti magni ea, ipsum expedita rerum asperiores ratione veritatis sint! Necessitatibus, voluptate?</p>
+            <p>Perferendis ipsa velit rerum sunt quo aspernatur sed, provident aut omnis. Commodi ab nesciunt ipsam odio ex dolorum voluptates qui consequatur temporibus illo optio doloremque, reiciendis ullam eveniet culpa aliquam voluptatum atque perspiciatis nemo omnis cupiditate? Ipsum voluptatem, quam, ea quis explicabo suscipit qui impedit soluta quisquam eos cumque dolores.</p>
+            <p>Consequuntur expedita numquam consequatur blanditiis hic dolor praesentium enim itaque fuga veniam illum nesciunt adipisci voluptas, beatae natus temporibus unde. Corporis sed odio et numquam enim facere mollitia earum non minima magnam culpa deserunt perferendis fugiat, repudiandae, at expedita. Accusantium asperiores aspernatur a illo soluta dignissimos explicabo porro ut quod.</p>
+            <p>Quidem veniam, maxime iste nobis, molestiae harum eaque at inventore excepturi sed debitis neque natus exercitationem id laudantium voluptate! Quos, laboriosam accusamus nihil deleniti omnis id vero! Sed deserunt delectus neque veritatis doloribus modi possimus rerum illo consequatur, voluptates doloremque illum incidunt ratione iure facere inventore harum? Modi, nesciunt assumenda.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

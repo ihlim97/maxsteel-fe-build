@@ -46,3 +46,18 @@ const variant3 = new Swiper('.carousel.variant-timeline', {
         }
     }
 })
+
+const variant4 = new Swiper('.carousel.variant-media', {
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction'
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    loop: true,
+    autoplay: {
+        delay: 5000
+    }
+})

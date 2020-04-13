@@ -1,0 +1,27 @@
+<div class="swiper-container carousel variant-media">
+    <div class="swiper-wrapper">
+        {% for item in 1..6 %}
+            <div class="swiper-slide">
+                <div class="slide-layout">
+                    <div class="slide-background">
+                        <img src="assets/img/warehouse-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="swiper-button-prev">
+        <svg>
+            <use xlink:href="assets/icons/icons.svg#sprite-long-arrow" href="assets/icons/icons.svg#sprite-long-arrow"></use>
+        </svg>
+    </div>
+    
+    <div class="swiper-button-next">
+        <svg>
+            <use xlink:href="assets/icons/icons.svg#sprite-long-arrow" href="assets/icons/icons.svg#sprite-long-arrow"></use>
+        </svg>
+    </div>
+
+    <div class="swiper-pagination">3 / 5</div>
+</div>

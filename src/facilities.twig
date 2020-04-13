@@ -1,0 +1,53 @@
+{% extends "templates/partials/base.twig" %}
+
+{% block main %}
+<div class="container-fluid px-3 px-md-5 py-5">
+    <div class="row mb-6">
+        <div class="col-12">
+            <a href="/media.html" class="btn btn-link p1 variant-back">
+                {% include "templates/components/icon.twig" with {
+                    iconName: 'chevron-back',
+                    iconSize: 's'
+                } %}
+                <div class="title">MEDIA</div>
+            </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <h1 class="h3 p2">FACILITIES</h1>
+        </div>
+    </div>
+
+    <ul class="list variant-media mb-6">
+        {% set cardImages = [
+            'production-line-2.jpg',
+            'production-line-1.jpg',
+            'welding.jpg'
+        ] %}
+        {% for item in 1..9 %}
+            <li class="list-item">
+                <a href="/facilities-detail-page.html" class="no-text-decoration">
+                    <div class="card variant-4">
+                        <div class="card-thumbnail">
+                            <div class="img-aspect-ratio variant-1:1 variant-md-4:3">
+                                <img src="assets/img/{{ cardImages[loop.index % 3] }}" alt="Card thumbnail">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            {% if header == 'EVENTS' %}
+                                <small class="date">27/03/2020</small>
+                            {% endif %}
+                            <p class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam.</p>
+                            {% include "templates/components/icon.twig" with {
+                                iconName: 'right-arrow',
+                                iconSize: 'm'
+                            } %}
+                        </div>
+                    </div>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+{% endblock %}
