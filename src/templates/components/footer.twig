@@ -1,6 +1,8 @@
 <div class="main-footer bg-p1 p-3 p-md-5">
     <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-center">
-        {% include "list-variant-social.twig" %}
+        {% include "list-variant-social.twig" with {
+            variant: 'inverted'
+        } %}
         <div class="footer-links mb-3 mb-md-0">
             <a class="lk1 w" href="/visit-maxsteel.html">VISIT MAXSTEEL</a>
             <a class="lk1 w" href="/products.html">SERVICES</a>

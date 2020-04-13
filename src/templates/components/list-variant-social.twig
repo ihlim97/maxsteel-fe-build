@@ -1,5 +1,5 @@
 {% set iconNames = ['instagram', 'facebook', 'linkedin'] %}
-<ul class="list variant-social mr-5 mb-4 mb-md-0">
+<ul class="list variant-social mr-5 mb-4 mb-md-0{% if variant %} {{ variant }}{% endif %}">
     {% for icon in iconNames %}
         <li class="list-item">
             <a href="#" class="social-media">
