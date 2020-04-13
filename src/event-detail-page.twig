@@ -1,0 +1,55 @@
+{% extends "templates/partials/base.twig" %}
+
+{% block main %}
+
+<div class="container-fluid px-3 px-md-5 py-3">
+    <div class="row">
+        <div class="col-12">
+            <a href="/events.html" class="btn btn-link p1 variant-back">
+                {% include "templates/components/icon.twig" with {
+                    iconName: 'chevron-back',
+                    iconSize: 's'
+                } %}
+                <div class="title">EVENTS</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="responsive-iframe">
+    <iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/BuJSY6x1rYg?autoplay=0&mute=1"
+        frameborder="0" 
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</div>
+
+
+<div class="container-fluid px-3 px-md-5 mt-4 pt-5">
+    <div class="row">
+        <div class="col-12">
+            <p>17/3/2020</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-3 px-md-5 pt-4 pb-5">
+    <div class="row mb-5">
+        <div class="col-12 col-md-9">
+            <h1 class="h3 p1 text-uppercase">Sed ut perspiciatis unde omnis iste natus error sit</h1>
+        </div>
+        <div class="col-12 offset-md-1 col-md-2 pt-1">
+            {% include "templates/components/list-variant-social.twig" %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, quam ipsum. Perferendis impedit labore consequuntur accusamus animi, maiores doloribus iure ut debitis et expedita voluptatibus, necessitatibus quisquam! Ullam provident excepturi sequi maiores vitae vel corrupti eveniet necessitatibus distinctio accusamus voluptates quaerat, saepe similique illum nulla esse reprehenderit animi praesentium vero!</p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
