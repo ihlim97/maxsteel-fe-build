@@ -147,4 +147,71 @@
             }
         }
     }
+
+    &.variant-4 {
+        border: none;
+        display: flex;
+        flex-direction: row;
+
+        .card-thumbnail {
+            flex-basis: 40%;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            margin-right: 1rem;
+
+            img {
+                transition: 0.3s ease;
+            }
+        }
+
+        .card-content {
+            .icon {
+                color: $gray-300;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(calc(-50% - 1rem));
+            }
+        }
+
+        .date {
+            color: #1A1919;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            text-transform: uppercase;
+            font-weight: 600;
+            color: $p1;
+            transition: 0.3s ease;
+            width: calc(100% - 30px);
+        }
+
+        @include media-breakpoint-up (md) {
+            flex-direction: column;
+
+            .card-content .icon {
+                display: none;
+            }
+
+            .card-thumbnail {
+                margin-right: 0;
+            }
+
+            .card-title {
+                font-size: 1.125rem;
+                width: auto;
+            }
+
+            &:hover {
+                .card-thumbnail img {
+                    transform: scale(1.05);
+                }
+
+                .card-title {
+                    color: darken($color: $p1, $amount: 5)
+                }    
+            }
+        }
+    }
 }

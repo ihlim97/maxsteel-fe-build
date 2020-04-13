@@ -147,4 +147,41 @@
             }
         }
     }
+
+    &.variant-media {
+        $media-card-spacing: 32px;
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        .list-item {
+            flex-basis: 100%;
+            
+            &:not(:last-child) {
+                border-bottom: 1px solid $gray-200;
+            }
+            
+            &:not(:first-child) {
+                margin-top: 1rem;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            margin: 0 -#{$media-card-spacing};
+
+            .list-item {
+                flex-basis: calc(100% / 3);
+                padding: 0 $media-card-spacing;
+
+                &:not(:last-child) {
+                    border-bottom: none;
+                }
+
+                &:not(:first-child) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }
