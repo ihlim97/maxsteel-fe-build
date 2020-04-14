@@ -9,7 +9,7 @@ module.exports = merge(common, {
     entry: "./src/js/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: 'js/[name].js'
+        filename: 'js/[name].[hash].js'
     },
     module: {
         rules: [

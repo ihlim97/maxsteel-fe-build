@@ -31,7 +31,7 @@ module.exports = {
             }
         }),
         new MiniCssExtractPlugin({
-            filename: "css/bundle.css"
+            filename: "css/bundle.[hash].css"
         }),
         new CssUrlRelativePlugin(),
         new webpack.ProvidePlugin({
