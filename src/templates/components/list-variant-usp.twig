@@ -1,7 +1,7 @@
-<ul class="list variant-usp">
+<ul class="list variant-usp animated list-item-slide-in">
     {% set iconNames = ['factory', 'engineering-process', 'champion', 'strategy-plan'] %}
     {% for icon in iconNames %}
-        <li class="list-item">
+        <li class="list-item" data-scroll>
             {% include "icon.twig" with {
                 iconSize: '9xl my-4 my-md-5',
                 iconName: icon

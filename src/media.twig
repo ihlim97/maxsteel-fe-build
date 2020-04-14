@@ -18,14 +18,14 @@
             <a href="/facilities.html" class="lk1 p1"><strong>VIEW MORE</strong></a>
         </div>
     </div>
-    <ul class="list variant-media mb-5">
+    <ul class="list variant-media mb-5 animated list-item-slide-in">
         {% set cardImages = [
             'welding.jpg',
             'production-line-1.jpg',
             'production-line-2.jpg'
         ] %}
         {% for item in 1..3 %}
-            <li class="list-item">
+            <li class="list-item" data-scroll>
                 <a href="/facilities-detail-page.html" class="no-text-decoration">
                     {% include "templates/components/card-variant-4.twig" with {
                         imagePath: 'assets/img/' ~ cardImages[loop.index - 1],
@@ -50,14 +50,14 @@
             <a href="/facilities.html" class="lk1 p1"><strong>VIEW MORE</strong></a>
         </div>
     </div>
-    <ul class="list variant-media mb-5">
+    <ul class="list variant-media mb-5 animated list-item-slide-in">
         {% set cardImages = [
             'welding.jpg',
             'production-line-1.jpg',
             'production-line-2.jpg'
         ] %}
         {% for item in 1..3 %}
-            <li class="list-item">
+            <li class="list-item" data-scroll>
                 <a href="/facilities-detail-page.html" class="no-text-decoration">
                     {% include "templates/components/card-variant-4.twig" with {
                         imagePath: 'assets/img/' ~ cardImages[loop.index - 1],
@@ -82,14 +82,14 @@
             <a href="/facilities.html" class="lk1 p1"><strong>VIEW MORE</strong></a>
         </div>
     </div>
-    <ul class="list variant-media mb-5">
+    <ul class="list variant-media mb-5 animated list-item-slide-in">
         {% set cardImages = [
             'welding.jpg',
             'production-line-1.jpg',
             'production-line-2.jpg'
         ] %}
         {% for item in 1..3 %}
-            <li class="list-item">
+            <li class="list-item" data-scroll>
                 <a href="/facilities-detail-page.html" class="no-text-decoration">
                     {% include "templates/components/card-variant-4.twig" with {
                         imagePath: 'assets/img/' ~ cardImages[loop.index - 1],
@@ -114,14 +114,14 @@
             <a href="/events.html" class="lk1 p1"><strong>VIEW MORE</strong></a>
         </div>
     </div>
-    <ul class="list variant-media mb-5">
+    <ul class="list variant-media mb-5 animated list-item-slide-in">
         {% set cardImages = [
             'welding.jpg',
             'production-line-1.jpg',
             'production-line-2.jpg'
         ] %}
         {% for item in 1..3 %}
-            <li class="list-item">
+            <li class="list-item" data-scroll>
                 <a href="/event-detail-page.html" class="no-text-decoration">
                     {% include "templates/components/card-variant-4.twig" with {
                         imagePath: 'assets/img/' ~ cardImages[loop.index - 1],
