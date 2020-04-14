@@ -270,10 +270,10 @@
         img {
             position: absolute;
             object-fit: cover;
-            top: 0;
+            top: 50%;
             width: 100%;
-            height: auto;
             transform: translateY(-50%);
+            height: auto;
         }
 
         @include media-breakpoint-up(md) {
