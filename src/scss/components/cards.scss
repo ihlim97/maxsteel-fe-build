@@ -238,4 +238,34 @@
             }
         }
     }
+
+    &.variant-5 {
+        background-color: transparent;
+        border: none;
+
+        .card-thumbnail {
+            @include media-breakpoint-up (md) {
+                width: 80%;
+            }
+        }
+
+        .card-content {
+            padding-top: 2rem;
+
+            p {
+                font-size: 18px;
+                line-height: 100%;
+            }
+
+            &::before {
+                content: '';
+                width: 40%;
+                height: 1px;
+                background-color: $p1;
+                display: block;
+                position: absolute;
+                right: 2rem;
+            }
+        }
+    }
 }

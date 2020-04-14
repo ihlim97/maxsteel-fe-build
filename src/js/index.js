@@ -11,6 +11,9 @@ svg4everybody()
 // Import vendor libraries
 import "bootstrap";
 
+// Global Scripts
+import "./global";
+
 // Import the JS components
 import "./components/navigation";
 import "./components/carousels";

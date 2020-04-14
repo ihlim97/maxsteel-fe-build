@@ -2,7 +2,7 @@
 
 {% block main %}
     <div class="container-fluid px-3 px-md-5 py-5">
-        <h1 class="p1 h2">VISIT MAXSTEEL</h1>
+        <h1 class="p2 h2">VISIT MAXSTEEL</h1>
     </div>
 
     <div class="banner">
@@ -16,7 +16,7 @@
                     colourVariant: 'p1'
                 } %}
                     {% block text %}
-                        <h2 class="h3 mb-4">MAXSTEEL SINGAPORE</h2>
+                        <h2 class="h3 mb-4">ABOUT US</h2>
                     {% endblock %}
                 {% endembed %}
 
@@ -32,11 +32,56 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="bg-gray-200 pt-5 pb-6">
+        <div class="container-fluid px-3 px-md-5 pt-4">
+            {% embed "templates/components/title.twig" with {
+                colourVariant: 'p1'
+            } %}
+                {% block text %}
+                    <h3 class="mb-5">GROUP STRUCTURE</h3>
+                {% endblock %}
+            {% endembed %}
+        </div>
+        <div class="swiper-container carousel variant-group-structure">
+            <div class="swiper-wrapper">
+                {% for item in 1..6 %}
+                    <div class="swiper-slide">
+                        <div class="card variant-5">
+                            <div class="card-thumbnail">
+                                <div class="img-aspect-ratio variant-1:1 variant-md-10:11">
+                                    <img src="assets/img/uncle.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p class="mb-0 p1"><strong>JOHN DOE,</strong></p>
+                                <p class="mb-0 p1">MARKETING<br>DIRECTOR</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="swiper-button-prev">
+                <svg>
+                    <use xlink:href="assets/icons/icons.svg#sprite-long-arrow" href="assets/icons/icons.svg#sprite-long-arrow"></use>
+                </svg>
+            </div>
+            
+            <div class="swiper-button-next">
+                <svg>
+                    <use xlink:href="assets/icons/icons.svg#sprite-long-arrow" href="assets/icons/icons.svg#sprite-long-arrow"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-3 px-md-5 pt-6 pb-6 pb-md-5">
         <div class="section variant-4 mb-5">
             <div class="line"></div>
             <div class="row mb-5">
-                <div class="col-12 col-md-8 offset-md-2">
+                <div class="col-12 col-md-8 offset-md-2 pt-6">
                     {% embed "templates/components/title.twig" with {
                         colourVariant: 'p1'
                     } %}
@@ -52,53 +97,30 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-9">
-                    <div class="img-aspect-ratio variant-16:6">
+                <div class="col-12 col-md-9 section-image-container">
+                    <div class="img-aspect-ratio variant-16:6 ">
                         <img src="assets/img/businessman.jpg" alt="">
                     </div>
                 </div>
             </div>
 
-            <div class="floating-content rellax" data-rellax-speed="0.5">
+            <div class="floating-content rellax" data-rellax-speed="-1.2">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 col-md-6 offset-md-6">
+                        <div class="col-12 col-md-8 offset-md-4 col-xl-6 offset-xl-6">
                             {% include "templates/components/blockquote-variant-hero.twig" %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        {% embed "templates/components/title.twig" with {
-            colourVariant: 'p1'
-        } %}
-            {% block text %}
-                <h2 class="h3">MILESTONE</h2>
-            {% endblock %}
-        {% endembed %}
     </div>
 
-    <div class="container-fluid bg-gray-200 px-3 px-md-5 py-5">
-        <div class="carousel variant-timeline swiper-container">
-            <div class="swiper-wrapper">
-                {% for item in 1995..2020 %}
-                    <div class="swiper-slide">
-                        <h5>{{ item }}</h5>
-                        {% include "templates/components/blockquote-variant-milestone.twig" %}
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="swiper-scrollbar mt-5"></div>
-            <h6 class="gray-900 text-center mt-3">DRAG TO EXPLORE</h6>
-        </div>
-    </div>
-
-    <div class="container-fluid py-5 section variant-5">
+    <div class="container-fluid pt-6 mt-5 mt-md-0 pb-5 section variant-5">
         <div class="row align-items-center py-5">
             <div class="col-12 col-md-5 text-right px-5 mb-4 mb-md-0 rellax" data-rellax-speed="0.3" data-rellax-xs-speed="0">
                 <h2 class="display-2 p1 offset-title-right">VISION</h2>
-                <p class="h5 p2">To be the top preferred metal processing and trading center that supports metal product engineering solution providers in the world.</p>
+                <p class="description">To be the top preferred metal processing and trading center that supports metal product engineering solution providers in the world.</p>
             </div>
             <div class="col-12 col-md-7 px-0">
                 <div class="img-aspect-ratio variant-16:9">
@@ -114,8 +136,65 @@
                 </div>
             </div>
             <div class="col-12 col-md-5 px-5 mt-4 mt-md-0 rellax" data-rellax-speed="0.1" data-rellax-xs-speed="0">
-                <p class="h5 p2">To continually challenge ourselves in sourcing and supplying unique products and services with excellent quality and competitive pricing for the mutual benefit of our customers.</p>
+                <p class="description">To continually challenge ourselves in sourcing and supplying unique products and services with excellent quality and competitive pricing for the mutual benefit of our customers.</p>
                 <h2 class="display-2 p1 offset-title-left">MISSION</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-3 px-md-5 pt-5 mt-md-0 pb-5">
+        {% embed "templates/components/title.twig" with {
+            colourVariant: 'p1'
+        } %}
+            {% block text %}
+                <h2 class="h3">MILESTONE</h2>
+            {% endblock %}
+        {% endembed %}
+    </div>
+
+    <div class="container-fluid bg-gray-200 px-3 px-md-5 py-5 mb-6">
+        <div class="carousel variant-timeline swiper-container">
+            <div class="swiper-wrapper">
+                {% for item in 1995..2020 %}
+                    <div class="swiper-slide">
+                        <h5 class="mb-3">{{ item }}</h5>
+                        {% include "templates/components/blockquote-variant-milestone.twig" %}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-scrollbar mt-5"></div>
+            <h6 class="gray-900 text-center mt-3">DRAG TO EXPLORE</h6>
+        </div>
+    </div>
+
+    <div id="milestone-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="milestoneModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content px-0">
+                <div class="modal-header px-3 px-md-6">
+                    <h5 class="modal-title p2 text-uppercase" id="milestoneModalTitle">1995</h5>
+                    <button type="button" class="close mr-3" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <svg class="icon">
+                                <use href="assets/icons/icons.svg#sprite-close"></use>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body px-0">
+                    <div class="px-3 px-md-6">
+                        <p class="h5 p1 text-uppercase mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga.</p>
+                    </div>
+                    <div class="img-aspect-ratio variant-16:9 variant-md-16:6">
+                        <img src="assets/img/welding-alt.jpg" alt="">
+                    </div>
+                    <div class="px-3 px-md-6 pt-5 pb-4">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea culpa eum nulla dolorum obcaecati. Facilis inventore sunt cum sit, sed saepe illo minima quae officia. Sed pariatur enim excepturi quia.</p>
+                        <p>Minus at, cupiditate ab perferendis voluptatem reiciendis eius suscipit ipsam tenetur rem vitae a inventore dolor! Dolorum nam necessitatibus magni eligendi similique! Illum cupiditate quo corrupti quae quidem? Quo, optio.</p>
+                        <p>Sed quos ipsam omnis atque provident, saepe cupiditate adipisci eum accusantium placeat laboriosam ex aliquid corrupti. Libero aliquid eveniet vel, ad ab aut, placeat dolorem deleniti animi maiores repellendus consectetur?</p>
+                        <p>Eius beatae, a, numquam ex veritatis, veniam deserunt maxime nemo tempore amet quis. Amet dolores reiciendis a? Cupiditate accusantium a pariatur nisi tempore deleniti maxime ullam, sint dolorem expedita quae.</p>
+                        <p>Pariatur, autem id? Animi rerum quis laudantium expedita explicabo fuga! Eius porro quam, autem assumenda magnam placeat sint maxime, error optio similique cupiditate suscipit debitis, corporis sed architecto odio nihil!</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -1,10 +1,28 @@
 .blockquote {
     &.variant-milestone {
         border-left: 1px solid $p2;
-        padding: 0 1rem;
+        padding: 0 1rem 2rem 2rem;
+        margin-left: 2rem;
     
         p {
             font-size: 0.875rem;
+        }
+
+        .btn-view-more {
+            position: absolute;
+            background-color: $p1;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            left: 2rem;
+            bottom: 0;
+            transform: translateX(-50%);
+            transition: 0.1s ease;
+
+            &:hover {
+                background-color: darken($color: $p1, $amount: 5)
+            }
         }
     }
 
@@ -12,6 +30,10 @@
         footer {
             font-weight: 800;
             padding-left: 0;
+        }
+
+        .display-title {
+            font-weight: 500;
         }
     }
 }

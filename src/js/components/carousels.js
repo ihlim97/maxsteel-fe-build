@@ -35,7 +35,7 @@ const variant2 = new Swiper('.carousel.variant-products', {
 })
 
 const variant3 = new Swiper('.carousel.variant-timeline', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true
@@ -59,5 +59,27 @@ const variant4 = new Swiper('.carousel.variant-media', {
     loop: true,
     autoplay: {
         delay: 5000
+    }
+})
+
+const variant5 = new Swiper('.carousel.variant-group-structure', {
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction'
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    loop: true,
+    loopedSlides: 3,
+    slidesPerView: 'auto',
+    autoplay: {
+        delay: 50000
+    },
+    breakpoints: {
+        480: {
+            slidesOffsetBefore: 48
+        }
     }
 })

@@ -33,6 +33,10 @@
         padding-top: 66.66%;
     }
 
+    &.variant-10\:11 {
+        padding-top: 110%;
+    }
+
     &.variant-16\:6 {
         padding-top: 37.50%;
     }
@@ -76,6 +80,10 @@
     
         &.variant-md-1\:1 {
             padding-top: 100%;
+        }
+
+        &.variant-md-10\:11 {
+            padding-top: 110%;
         }
     }
 }
