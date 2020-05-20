@@ -52,7 +52,7 @@ module.exports = merge(common, {
                 }
             },
             {
-                test: /\.(svg|eot|ttf|woff|woff2)$/,
+                test: /\.(svg|eot|otf|ttf|woff|woff2)$/,
                 exclude: [/img/, /img\/icons/],
                 use: {
                     loader: "file-loader",
