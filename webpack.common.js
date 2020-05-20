@@ -1,8 +1,6 @@
 const path =                    require("path")
 const fs =                      require("fs")
 const HtmlWebpackPlugin =       require("html-webpack-plugin")
-const MiniCssExtractPlugin =    require("mini-css-extract-plugin")
-const CssUrlRelativePlugin =    require("css-url-relative-plugin")
 const webpack =                 require("webpack");
 const SVGSpritemapPlugin =      require("svg-spritemap-webpack-plugin");
 const CopyPlugin =              require("copy-webpack-plugin");
@@ -30,10 +28,6 @@ module.exports = {
                 filename: "assets/icons/icons.svg",
             }
         }),
-        new MiniCssExtractPlugin({
-            filename: "css/bundle.[hash].css"
-        }),
-        new CssUrlRelativePlugin(),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: 'jquery',

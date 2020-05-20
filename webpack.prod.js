@@ -3,13 +3,14 @@ const common =                      require("./webpack.common")
 const merge =                       require("webpack-merge")
 const MiniCssExtractPlugin =        require("mini-css-extract-plugin")
 const { CleanWebpackPlugin } =      require("clean-webpack-plugin") // only need in prod cuz dev is using in-memory server
+const CssUrlRelativePlugin =        require("css-url-relative-plugin")
 
 module.exports = merge(common, {
     mode: "production",
     entry: "./src/js/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: 'js/[name].[hash].js',
+        filename: 'assets/js/[name].js',
         // publicPath: '~/Assets/' // comment this out when building for Firebase
     },
     module: {
@@ -106,5 +107,11 @@ module.exports = merge(common, {
             }
         ]
     },
-    plugins: [new CleanWebpackPlugin()]
+    plugins: [
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: "assets/css/bundle.css"
+        }),
+        new CssUrlRelativePlugin(),
+    ]
 })

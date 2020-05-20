@@ -2,7 +2,7 @@ const path =                        require("path")
 const common =                      require("./webpack.common")
 const merge =                       require("webpack-merge")
 const MiniCssExtractPlugin =        require("mini-css-extract-plugin")
-
+const CssUrlRelativePlugin =        require("css-url-relative-plugin")
 
 module.exports = merge(common, {
     mode: "development",
@@ -105,5 +105,11 @@ module.exports = merge(common, {
             }
         ]
     },
-    devtool: "source-map"
+    devtool: "source-map",
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "css/bundle.[hash].css"
+        }),
+        new CssUrlRelativePlugin()
+    ]
 })
