@@ -3,6 +3,7 @@ import "../scss/main.scss";
 
 // Polyfills for Internet Explorer
 import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 // SVG Polyfill for Internet Explorer
 import svg4everybody from 'svg4everybody';
@@ -13,6 +14,7 @@ import "bootstrap";
 
 // Global Scripts
 import "./global";
+import "./helpers/validations"
 
 // Import the JS components
 import "./components/navigation";

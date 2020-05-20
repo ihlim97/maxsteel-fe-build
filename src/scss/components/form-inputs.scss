@@ -22,6 +22,10 @@
                 transition: 0.2s ease;
             }
         }
+
+        &.is-invalid + .form-check-label {
+            color: #dc3545;
+        }
     }
 
     /** Different state overrides **/

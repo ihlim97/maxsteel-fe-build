@@ -138,58 +138,107 @@
             {% endembed %}
             <p class="w">Questions, comments, or suggestions?<br> Simply fill in the form and we’ll be in touch shortly.</p>
         </div>
-        <div class="col-12 col-md-7">
-            <form action="">
-                <div class="row mb-4">
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <label for="subjectDD" class="w">Subject*</label>
-                            <select name="subject" id="subjectDD" class="form-control">
-                                <option disabled selected hidden value="">Select Subject</option>
-                                <option value="Enquiry">Enquiry</option>
-                                <option value="Enquiry">Feedback</option>
-                                <option value="Enquiry">Others</option>
-                            </select>
+        <div class="col-12 col-md-7" id="contact-form">
+            <validation-observer ref="contactForm" v-slot="{ handleSubmit }">
+                <form ref="theForm" @submit.prevent="handleSubmit(onSubmit)">
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6">
+                            <validation-provider slim rules="required" v-slot="{ failedRules, errors }">
+                                <div class="form-group">
+                                    <label for="subjectDD" class="w">Subject*</label>
+                                    <select name="subject"
+                                        v-model="formData.Subject"
+                                        id="subjectDD"
+                                        :class="{ 'form-control': true, 'is-invalid': errors.length > 0 }">
+                                        <option disabled selected hidden value="">Select Subject</option>
+                                        <option value="Enquiry">Enquiry</option>
+                                        <option value="Feedback">Feedback</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                    <div class="text-danger" v-if="errors.length > 0">
+                                        <small class="error-message" v-if="failedRules.required">This field is required</small>
+                                    </div>
+                                </div>
+                            </validation-provider>
                         </div>
                     </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <label for="firstName" class="w">First Name*</label>
-                            <input type="text" name="firstName" id="firstName" class="form-control">
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6">
+                            <validation-provider slim rules="required" v-slot="{ failedRules, errors }">
+                                <div class="form-group">
+                                    <label for="firstName" class="w">First Name*</label>
+                                    <input type="text" name="firstName" id="firstName" v-model="formData.FirstName" :class="{ 'form-control': true, 'is-invalid': errors.length > 0 }">
+                                    <div class="text-danger" v-if="errors.length > 0">
+                                        <small class="error-message" v-if="failedRules.required">This field is required</small>
+                                    </div>
+                                </div>
+                            </validation-provider>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <validation-provider slim rules="required" v-slot="{ failedRules, errors }">
+                                <div class="form-group">
+                                    <label for="lastName" class="w">Last Name*</label>
+                                    <input type="text" name="lastName" id="lastName" v-model="formData.LastName" :class="{ 'form-control': true, 'is-invalid': errors.length > 0 }">
+                                    <div class="text-danger" v-if="errors.length > 0">
+                                        <small class="error-message" v-if="failedRules.required">This field is required</small>
+                                    </div>
+                                </div>
+                            </validation-provider>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
-                        <div class="form-group">
-                            <label for="lastName" class="w">Last Name*</label>
-                            <input type="text" name="lastName" id="lastName" class="form-control">
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6">
+                            <validation-provider slim rules="required" v-slot="{ failedRules, errors }">
+                                <div class="form-group">
+                                    <label for="email" class="w">Email*</label>
+                                    <input type="text" v-model="formData.Email" name="email" id="email" :class="{ 'form-control': true, 'is-invalid': errors.length > 0 }">
+                                    <div class="text-danger" v-if="errors.length > 0">
+                                        <small class="error-message" v-if="failedRules.required">This field is required</small>
+                                    </div>
+                                </div>
+                            </validation-provider>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <validation-provider slim rules="required" v-slot="{ failedRules, errors }">
+                                <div class="form-group">
+                                    <label for="phoneNumber" class="w">Phone Number*</label>
+                                    <input type="text" v-model="formData.PhoneNumber" name="phoneNumber" id="phoneNumber" :class="{ 'form-control': true, 'is-invalid': errors.length > 0 }">
+                                    <div class="text-danger" v-if="errors.length > 0">
+                                        <small class="error-message" v-if="failedRules.required">This field is required</small>
+                                    </div>
+                                </div>
+                            </validation-provider>
                         </div>
                     </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-12 col-md-6">
-                         <div class="form-group">
-                            <label for="email" class="w">Email*</label>
-                            <input type="text" name="email" id="email" class="form-control">
+                    <validation-provider slim rules="required" v-slot="{ failedRules, errors }">
+                        <div class="form-group mb-5">
+                            <label class="w" for="message">Message*</label>
+                            <textarea name="message" v-model="formData.Message" id="message" cols="30" rows="10" :class="{ 'form-control': true, 'is-invalid': errors.length > 0 }"></textarea>
+                            <div class="text-danger" v-if="errors.length > 0">
+                                <small class="error-message" v-if="failedRules.required">This field is required</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                         <div class="form-group">
-                            <label for="phoneNumber" class="w">Phone Number*</label>
-                            <input type="text" name="phoneNumber" id="phoneNumber" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group mb-5">
-                    <label class="w" for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
-                </div>
+                    </validation-provider>
 
-                <div class="d-flex justify-content-end">
-                    <button class="btn btn-secondary" type="submit">Submit</button>
-                </div>
-            </form>
+                    <div class="d-flex flex-column mb-4">
+                        <vue-recaptcha ref="reCaptcha" sitekey="6LfA8PMUAAAAAP0KbW2Dn3F2oS4MsqumFOl31Ghb"
+                            @verify="setRecaptchaResponse"
+                            @expired="setRecaptchaResponse('')"></vue-recaptcha>
+                        <validation-provider rules="required" v-slot="{ errors }" slim>
+                            <input type="hidden" v-model="recaptchaResponse">
+                            <small v-if="errors.length > 0" class="error-message text-danger">Please verify the reCAPTCHA challenge</small>
+                        </validation-provider>
+                    </div>
+
+                    <div class="error-message text-danger text-center" v-if="generalSubmitError !== ''">
+                        <small></small>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-secondary" type="submit">Submit</button>
+                    </div>
+                </form>
+            </validation-observer>
         </div>
     </div>
 </div>

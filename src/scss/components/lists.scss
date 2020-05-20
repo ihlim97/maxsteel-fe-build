@@ -31,6 +31,12 @@
             align-items: center;
             text-align: center;
             width: calc(100% / 2);
+
+            .item-desc {
+                ul, ol {
+                    padding-left: 0;
+                }
+            }
         }
     
         @include media-breakpoint-up (md) {
