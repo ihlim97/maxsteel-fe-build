@@ -7,3 +7,7 @@
 
 // @include font-face("PT Sans", "../assets/fonts/PTSans-Bold", 700, normal, ttf);
 // @include font-face("PT Sans", "../assets/fonts/PTSans-BoldItalic", 700, italic, ttf);
+
+@include font-face("Noto Sans SC", "../assets/fonts/NotoSansSC-Regular", 400, normal, woff);
+@include font-face("Noto Sans SC", "../assets/fonts/NotoSansSC-Medium", 600, normal, woff);
+@include font-face("Noto Sans SC", "../assets/fonts/NotoSansSC-Bold", 800, normal, woff);
