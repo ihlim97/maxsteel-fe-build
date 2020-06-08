@@ -5,6 +5,10 @@
         height: calc(100vh - 200px); 
     }
 
+    @include shermans-laptop () {
+        height: calc(100vh - 120px); 
+    }
+
     &.video-ready {
         .video-poster-container {
             opacity: 0;

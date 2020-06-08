@@ -1,6 +1,10 @@
 main,
 footer {
     @include media-breakpoint-up(lg) {
-        padding-left: 100px;
+        padding-left: $leftpane-width;
+    }
+
+    @include shermans-laptop () {
+        padding-left: $leftpane-width-high-pixel-density;
     }
 }

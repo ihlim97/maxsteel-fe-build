@@ -22,7 +22,13 @@ header {
         @include media-breakpoint-up(lg) {
             left: 100px;
             height: 100px;
-            width: calc(100% - 100px);
+            width: calc(100% - #{$leftpane-width});
+        }
+
+        @include shermans-laptop () {
+            left: $leftpane-width-high-pixel-density;
+            height: $topbar-height-high-pixel-density;
+            width: calc(100% - #{$leftpane-width-high-pixel-density});
         }
         
         .spacer {
@@ -58,7 +64,7 @@ header {
             border-right: 1px solid $gray-100;
             background-color: #fff;
             position: fixed;
-            width: 100px;
+            width: $leftpane-width;
             height: 100%;
             right: auto;
             top: 0;
@@ -68,6 +74,10 @@ header {
             justify-content: center;
             align-items: center;
         }
+
+        @include shermans-laptop () {
+            width: $leftpane-width-high-pixel-density
+        }
     }
 
     .nav-top-pane-spacer {
@@ -75,7 +85,11 @@ header {
         width: 100%;
 
         @include media-breakpoint-up(lg) {
-            height: 100px;
+            height: #{$topbar-height};
+        }
+
+        @include shermans-laptop () {
+            height: $topbar-height-high-pixel-density;
         }
     }
 
@@ -107,12 +121,16 @@ header {
 
         @include media-breakpoint-up (lg) {
             transform: translateX(-100%);
-            left: 100px;
+            left: $leftpane-width;
             padding: 78px;
 
             &.active {
                 transform: translateX(0)
             }
+        }
+
+        @include shermans-laptop () {
+            left: $leftpane-width-high-pixel-density;
         }
     }
 

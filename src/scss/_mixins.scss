@@ -1,4 +1,4 @@
-@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg, $display: auto) {
 	$src: null;
 
 	$extmods: (
@@ -22,5 +22,12 @@
 		font-style: $style;
 		font-weight: $weight;
 		src: $src;
+		font-display: $display;
 	}
+}
+
+@mixin shermans-laptop () {
+    @media (min-width: 1280px) and (min-resolution: 1.5dppx) {
+        @content;
+    }
 }
