@@ -150,9 +150,14 @@ header {
         a {
             color: #fff;
             text-transform: uppercase;
-
+            transition: .15s ease;
+            
             &:hover {
                 color: $p2;
+            }
+
+            &.h1:hover {
+                text-decoration: none;
             }
         }
 
