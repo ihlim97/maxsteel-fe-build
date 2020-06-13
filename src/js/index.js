@@ -22,3 +22,4 @@ import "./components/carousels";
 import "./components/parallax";
 import "./components/forms";
 import "./components/video-header";
+import "./components/product-category-dropdown";
