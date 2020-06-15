@@ -83,3 +83,15 @@ const variant5 = new Swiper('.carousel.variant-group-structure', {
         }
     }
 })
+
+const variantClientLogos = new Swiper('.carousel.variant-client-logos', {
+    slidesPerView: 3,
+    slidesPerColumn: 3,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    autoplay: {
+        delay: 3000
+    }
+})

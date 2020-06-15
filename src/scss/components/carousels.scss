@@ -5,6 +5,10 @@
         height: calc(100vh - 200px); // minus top pane, minue half a button, then minus the pagination
         min-height: 500px;
 
+        @include angelines-laptop {
+            height: calc(100vh - 150px)
+        }
+
         .slide-background {
             position: relative;
             height: 100%;
@@ -335,5 +339,43 @@
             padding: 0;
             width: calc(100% / 2.5);
         }
+    }
+}
+
+.carousel.variant-client-logos {
+    height: 300px;
+    width: 100%;
+
+    .swiper-slide {
+        height: calc(100% / 3);
+    }
+
+    .img-aspect-ratio {
+        // width: calc(100% / 3);
+        align-content: center;
+        justify-items: center;
+    }
+
+    .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        &-bullet {
+            width: 20px;
+            height: 2px;
+            margin: 0 .15rem;
+            background-color: $gray-500;
+
+            &-active {
+                background-color: $p1;
+            }
+        }
+    }
+
+    @include media-breakpoint-up (md) {
+        height: 500px;
     }
 }

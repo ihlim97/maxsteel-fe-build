@@ -75,20 +75,45 @@
                     {% endblock %}
                 {% endembed %}
             </div>
-            <div class="col-12 col-md-6 offset-md-1 mt-5 pt-5">
+            <div class="col-12 col-md-6 offset-md-1 pt-5 pt-md-0">
                 {% set logos = [
-                    'western-digital.png',
-                    'apple.png',
-                    'honda.png',
-                    'huawei.png',
-                    'samsung.png',
-                    'panasonic.png'
+                    'cisco.jpg',
+                    'dell.jpg',
+                    'diethelm.jpg',
+                    'flex.jpg',
+                    'hdb.jpg',
+                    'hp.jpg',
+                    'ibm.jpg',
+                    'interplex.jpg',
+                    'nanyang.jpg',
+                    'nikon.jpg',
+                    'nus.jpg',
+                    'oral-b.jpg',
+                    'schneider.jpg',
+                    'seagate.jpg',
+                    'shimano.jpg',
+                    'singapore-polytechnic.jpg',
+                    'singapore-sports-hub.jpg',
+                    'technip-fmc.jpg',
+                    'wesgate.jpg',
                 ] %}
-                <div class="d-flex flex-wrap client-logos">
-                    {% for logo in logos %}
-                        <img src="assets/img/{{logo}}" alt="" class="img-fluid">
-                    {% endfor %}
+
+                <div class="carousel variant-client-logos swiper-container">
+                    <div class="swiper-wrapper">
+                        {% for logo in logos %}
+                            <div class="swiper-slide">
+                                <div class="img-aspect-ratio variant-16:9">
+                                    <img src="assets/img/clients/{{logo}}" alt="">
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
             </div>
         </div>
     </div>
