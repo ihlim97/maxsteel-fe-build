@@ -1,3 +1,9 @@
+@include angelines-laptop {
+    html {
+        font-size: 14px;
+    }
+}
+
 @include shermans-laptop {
     html {
         font-size: 13px;
@@ -23,3 +29,4 @@
     //     font-size: .825rem !important;
     // }
 }
+

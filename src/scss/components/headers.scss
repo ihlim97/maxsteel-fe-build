@@ -9,6 +9,10 @@
         height: calc(100vh - 120px); 
     }
 
+    @include angelines-laptop {
+        height: calc(100vh - 160px)
+    }
+
     &.video-ready {
         .video-poster-container {
             opacity: 0;

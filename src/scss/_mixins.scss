@@ -31,3 +31,9 @@
         @content;
     }
 }
+
+@mixin angelines-laptop () {
+	@media (min-width: 1280px) and (max-width: 1440px) {
+        @content;
+    }
+}
