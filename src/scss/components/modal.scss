@@ -51,10 +51,12 @@
             position: absolute;
             right: 0;
             top: 3rem;
+            z-index: 1;
             
             .icon {
                 height: 2rem;
                 width: 2rem;
+                stroke: #000;
             }
         }
 
