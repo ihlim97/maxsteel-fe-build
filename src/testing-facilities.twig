@@ -1,0 +1,67 @@
+{% extends "templates/partials/base.twig" %}
+
+{% block main %}
+
+	<div class="container-fluid px-3 px-md-5 py-5">
+		<div class="row">
+			<div class="col-12">
+				<a href="/what-we-do.html" class="btn btn-link p1 variant-back">
+					{% include "templates/components/icon.twig" with {
+                    iconName: 'chevron-back',
+                    iconSize: 's'
+                } %}
+					<div class="title">QUALITY</div>
+				</a>
+			</div>
+			<div class="col-12">
+				<div class="row align-items-center">
+					<div class="col-12">
+						<h1 class="p2 h3 text-uppercase mb-4">Testing Facilities</h1>
+						<p>Besides mandatory dimensional inspections on line, MaxSteel continually invests in test equipment to provide value added testing services complementary to its services. This would further enhance customer confidence on the products received.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="container-fluid px-3 px-md-5 pb-5">
+        <div class="accordion" id="accordion-parent">
+            {% set list = ['collapse-1', 'collapse-2', 'collapse-3'] %}
+            {% for item in list %}
+                <div class="card">
+                    <div class="card-header" id="heading-{{ item }}">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link{{ loop.first ? '' : ' collapsed' }}" 
+                                type="button"
+                                data-toggle="collapse" 
+                                data-target="#{{ item }}" 
+                                aria-expanded="true" 
+                                aria-controls="{{ item }}">
+                                HARDNESS
+                                {% include "templates/components/icon.twig" with { iconSize: 'm', iconName: 'close' } %}
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="{{ item }}" class="collapse{{ loop.first ? ' show' : '' }}" aria-labelledby="{{ item }}" data-parent="#accordion-parent">
+                        <div class="card-body">
+                            <div class="container-fluid px-0">
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-12 col-md-6 text-content">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore saepe obcaecati, laudantium quam quae quo eveniet alias mollitia molestiae minus.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore saepe obcaecati, laudantium quam quae quo eveniet alias mollitia molestiae minus.</p>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="img-aspect-ratio variant-4:3">
+                                            <img src="assets/img/cutting-steel.jpg" alt="test">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

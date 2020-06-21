@@ -1,0 +1,101 @@
+.timeline {
+    position: relative;
+
+    .timeline-axis {
+        height: 90%;
+        width: 1px;
+        background-color: $p1;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &::before,
+        &::after {
+            content: '';
+            height: 12px;
+            width: 12px;
+            background-color: $p1;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+
+        &::after {
+            bottom: 0;
+        }
+    }
+
+    .timeline-content {
+        padding-bottom: 4rem;
+        padding-left: 1.5rem;
+    }
+
+    .col {
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 50%;
+            height: 1px;
+            background-color: $p1;
+            display: block;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    .row {
+        &:nth-last-child(2) {
+            
+            .col::after {
+                display: none;
+            }
+        }
+    }
+
+    @include media-breakpoint-up (md) {
+        .timeline-content {
+            padding-left: 0;
+            padding-right: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .timeline-axis {
+            height: 80%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+
+        .col {    
+            &::after {
+                right: 0;
+                left: auto;
+            }
+        }
+
+        .row {
+            &:nth-child(2n) {
+                flex-direction: row-reverse;
+        
+                .col::after {
+                    left: 0;
+                }
+        
+                .timeline-content {
+                    padding-right: 0rem;
+                    padding-left: 4rem;
+                }
+            }
+    
+            &:nth-last-child(2) {
+                
+                .col::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
