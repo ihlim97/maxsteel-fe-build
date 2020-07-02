@@ -155,6 +155,8 @@
 
         .card-thumbnail {
             flex-basis: 40%;
+            flex-grow: 0;
+            flex-shrink: 0;
             margin-bottom: 1rem;
             overflow: hidden;
             margin-right: 1rem;

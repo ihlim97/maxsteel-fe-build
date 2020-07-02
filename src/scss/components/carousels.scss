@@ -236,8 +236,7 @@
     }
 
     .slide-layout {
-        height: calc(100vh - 200px); // minus top pane, minue half a button, then minus the pagination
-        min-height: 500px;
+        height: 45vh; // minus top pane, minue half a button, then minus the pagination
 
         .slide-background {
             position: relative;
@@ -250,6 +249,11 @@
                 height: 100%;
                 object-fit: cover;
             }
+        }
+
+        @include media-breakpoint-up(md) {
+            min-height: 500px;
+            height: 100vh;
         }
     }
 }

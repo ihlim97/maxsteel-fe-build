@@ -1,16 +1,16 @@
 .header.variant-video {
     position: relative;
-    
+
     @include media-breakpoint-up(sm) {
         height: calc(100vh - 200px); 
     }
 
-    @include shermans-laptop () {
-        height: calc(100vh - 120px); 
-    }
-
     @include angelines-laptop {
         height: calc(100vh - 160px)
+    }
+
+    @include shermans-laptop () {
+        height: calc(100vh - 120px); 
     }
 
     &.video-ready {

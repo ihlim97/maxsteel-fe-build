@@ -14,4 +14,6 @@ $(function () {
     })
 
     ScrollOut()
+
+    // $("#direction-modal").modal('show')
 })

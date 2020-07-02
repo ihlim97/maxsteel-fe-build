@@ -23,3 +23,4 @@ import "./components/parallax";
 import "./components/forms";
 import "./components/video-header";
 import "./components/product-category-dropdown";
+import "./components/detailed-specs";

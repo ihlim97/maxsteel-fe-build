@@ -73,4 +73,30 @@
     .modal-footer {
         border-top: none;
     }
+
+    &.variant-detailed-specs {
+        .modal-header {
+            padding-top: 2rem;
+
+            .header-content {
+                width: 70%;
+            }
+
+            .modal-title {
+                line-height: 1;
+            }
+
+            .btn {
+                font-size: .825rem;
+            }
+        }
+
+        @include media-breakpoint-up (md) {
+            .modal-header {
+                .header-content {
+                    width: auto;
+                }
+            }
+        }
+    }
 }

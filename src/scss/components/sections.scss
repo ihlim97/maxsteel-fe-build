@@ -71,6 +71,13 @@
                 }
             }
         }
+
+        .product-description {
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     @include media-breakpoint-up(lg) {
@@ -164,7 +171,7 @@
         transform: rotate(90deg);
         transform-origin: 15% 100%;
         z-index: 1;
-        top: -8%;
+        top: -1%;
         right: 0;
 
         @include media-breakpoint-up(md) {

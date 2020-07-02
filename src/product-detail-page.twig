@@ -25,10 +25,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-8 col-lg-6 bg-p1 px-3 px-md-5 pb-5 pb-md-4 pt-4">
+            <div class="product-description col-12 col-md-8 col-lg-6 bg-p1 px-3 px-md-5 pb-5 pb-md-4 pt-4">
                 <p class="w">Electrolytic zinc coated steel is commonly known in the market as electro-galvanized steel or EG in short. The base material for EG is normally cold rolled steel, hot rolled based also exists.</p>
-                <p class="w">As its name suggests, the cold rolled steel undergoes surface treatment via electro galvanizing as well as other pre and post treatment process to improve the material characteristics.</p>
-                <p class="w">Different chemical post treatments allow a spectrum of varying material properties. EG offered by MaxSteel is certified 100% chromate-free and ROHS compliant.</p>
             </div>
         </div>
     </div>
@@ -44,8 +42,8 @@
         <img src="assets/img/hot-rolled-steel.png" alt="" class="rellax" data-rellax-speed="3" data-rellax-xs-speed="0">
     </div>
     <div class="content container-fluid rellax" data-rellax-speed="0.5">
-        <div class="row">
-            <div class="col-11 col-md-7 offset-md-5 bg-p1 p-5">
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-7 bg-p1 px-3 px-md-5 py-5">
                 {% embed "templates/components/title.twig" with {
                     colourVariant: 'p1-alt'
                 } %}
@@ -203,6 +201,34 @@
         </div>
         <div class="col-4 col-md-3 text-center">
             <img src="assets/img/rohs-logo.png" alt="Certification Logo" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-4">
+    <a href="http://umbraco.maxsteel.sg/media/woyh245v/hot-dipped-galvanized-steel-detailed-specifications.pdf?show_modal=true">view specs</a>
+</div>
+<div id="detailed-specs-modal" class="modal variant-detailed-specs fade" tabindex="-1" role="dialog" aria-labelledby="milestoneModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content px-0">
+            <div class="modal-header px-3 px-md-6">
+                <div class="header-content d-flex flex-column flex-md-row align-items-start align-items-md-center">
+                    <h5 class="modal-title p2 text-uppercase mb-3 mb-md-0 mr-md-5" id="milestoneModalTitle">Detailed Specifications</h5>
+                    <a href="#" target="_blank" class="btn btn-outline-primary btn-download">Download PDF</a>
+                </div>
+                <button type="button" class="close mr-3" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <svg class="icon">
+                            <use href="assets/icons/icons.svg#sprite-close"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body px-0">
+                <div class="px-3 pt-3 pb-4">
+                    <iframe src="#" width="100%" height="600px" frameborder="0"></iframe>
+                </div>
+            </div>
         </div>
     </div>
 </div>
