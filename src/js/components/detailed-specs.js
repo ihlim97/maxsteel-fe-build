@@ -26,7 +26,7 @@ $(function () {
             event.preventDefault()
             
             $modal.find('iframe').attr('src', pdfLink)
-            $modal.find('.btn-download').attr('href', pdfLink)
+            $modal.find('.btn-download').attr('href', pdfLink.replace('?show_modal=true',''))
             $modal.modal('show')
     
             return false;
