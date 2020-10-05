@@ -1,7 +1,7 @@
 {% extends "templates/partials/base.twig" %}
 
 {% block main %}
-    <div class="container-fluid px-3 px-md-5 py-5">
+    <div class="container-fluid px-3 px-md-5 py-5 bg-w">
         <h1 class="p2 h2 animated text-slide-in">VISIT MAXSTEEL</h1>
     </div>
 
@@ -9,7 +9,7 @@
         <img src="assets/img/warehouse.png" alt="">
     </div>
 
-    <div class="container-fluid px-3 px-md-5 py-5">
+    <div class="container-fluid px-3 px-md-5 py-5 bg-w">
         <div class="row mb-5">
             <div class="col-12 col-md-6">
                 {% embed "templates/components/title.twig" with {
@@ -32,6 +32,12 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="banner variant-video-fixed-position">
+        <video autoplay muted loop>
+            <source src="assets/videos/header.mp4">
+        </video>
     </div>
 
     <div class="bg-gray-200 pt-5 pb-6">
@@ -94,7 +100,7 @@
         </div>
     </div>
 
-    <div class="container-fluid px-3 px-md-5 pt-6 pb-6 pb-md-5">
+    <div class="container-fluid px-3 px-md-5 pt-6 pb-6 pb-md-5 bg-w">
         <div class="section variant-4 mb-5">
             <div class="line"></div>
             <div class="row mb-5">
@@ -133,7 +139,7 @@
         </div>
     </div>
 
-    <div class="container-fluid pt-6 mt-5 mt-md-0 pb-5 section variant-5">
+    <div class="container-fluid pt-6 mt-5 mt-md-0 pb-5 section variant-5 bg-w">
         <div class="row align-items-center py-5">
             <div class="col-12 col-md-5 text-right px-5 mb-4 mb-md-0 rellax" data-rellax-speed="0.3" data-rellax-xs-speed="0">
                 <h2 class="display-2 p1 offset-title-right animated text-slide-in">VISION</h2>
@@ -159,7 +165,7 @@
         </div>
     </div>
 
-    <div class="container-fluid px-3 px-md-5 pt-5 mt-md-0 pb-5">
+    <div class="container-fluid px-3 px-md-5 pt-5 mt-md-0 pb-5 bg-w">
         {% embed "templates/components/title.twig" with {
             colourVariant: 'p1'
         } %}
@@ -169,7 +175,7 @@
         {% endembed %}
     </div>
 
-    <div class="container-fluid bg-gray-200 px-3 px-md-5 py-5 mb-6">
+    <div class="container-fluid bg-gray-200 px-3 px-md-5 pt-5 pb-6">
         <div class="carousel variant-timeline swiper-container">
             <div class="swiper-wrapper">
                 {% for item in 1995..2020 %}

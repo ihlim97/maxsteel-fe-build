@@ -19,3 +19,15 @@
         }
     }
 }
+
+.banner.variant-video-fixed-position {
+    height: 300px;
+
+    video {
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
